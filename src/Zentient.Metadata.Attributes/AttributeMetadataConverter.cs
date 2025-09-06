@@ -22,6 +22,9 @@ namespace Zentient.Metadata.Attributes
             var builder = Metadata.Create();
             foreach (var attribute in attributes)
             {
+                // Custom handler support
+                if (AttributeHandlerRegistry.TryHandle(attribute, new AttributeHandlerContext(builder)))
+                    continue;
                 switch (attribute)
                 {
                     case BehaviorDefinitionAttribute:

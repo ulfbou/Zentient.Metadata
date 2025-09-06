@@ -8,7 +8,6 @@ using System.Reflection;
 using System.Linq;
 using Zentient.Abstractions.Metadata;
 using Zentient.Abstractions.Metadata.Definitions;
-using Zentient.Metadata.Extensions;
 
 namespace Zentient.Metadata.Attributes
 {
@@ -45,6 +44,9 @@ namespace Zentient.Metadata.Attributes
 
                 foreach (var attribute in attributes)
                 {
+                    // Custom handler support
+                    if (AttributeHandlerRegistry.TryHandle(attribute, new AttributeHandlerContext(builder)))
+                        continue;
                     switch (attribute)
                     {
                         case BehaviorDefinitionAttribute:
@@ -85,6 +87,9 @@ namespace Zentient.Metadata.Attributes
             var attributes = GetAttributes(member.GetType());
             foreach (var attribute in attributes)
             {
+                // Custom handler support
+                if (AttributeHandlerRegistry.TryHandle(attribute, new AttributeHandlerContext(builder)))
+                    continue;
                 switch (attribute)
                 {
                     case BehaviorDefinitionAttribute:
