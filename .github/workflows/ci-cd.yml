@@ -312,15 +312,12 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
   
-      - name: Fail if NUGET_API_KEY is not set
-        if: ${{ !secrets.NUGET_API_KEY }}
-        run: |
-          echo "NUGET_API_KEY is not set! Aborting publish."
-          exit 1
-  
       - name: Publish to NuGet
-        if: ${{ secrets.NUGET_API_KEY }}
         run: |
+          if [ -z "${{ secrets.NUGET_API_KEY }}" ]; then
+            echo "NUGET_API_KEY is not set! Skipping publish."
+            exit 0
+          fi
           for package in ./artifacts/*.nupkg; do
             echo "Publishing $package"
             dotnet nuget push "$package" \
