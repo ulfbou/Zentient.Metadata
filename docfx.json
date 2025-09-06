@@ -13,87 +13,26 @@
         }
       ],
       "dest": "api",
-      "includePrivateMembers": false,
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false,
-      "noRestore": false,
-      "namespaceLayout": "flattened",
-      "memberLayout": "samePage",
-      "allowCompilationErrors": false,
-      "properties": {
-        "TargetFramework": "net8.0"
-      },
       "filter": "filterConfig.yml"
     }
   ],
   "build": {
     "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
-      {
-        "files": [
-          "docs/**.md",
-          "docs/**/toc.yml"
-        ],
-        "exclude": [
-          "**/bin/**",
-          "**/obj/**",
-          "_site/**"
-        ]
-      },
-      {
-        "files": [
-          "README.md",
-          "CHANGELOG.md",
-          "CONTRIBUTING.md"
-        ]
-      },
-      {
-        "files": [
-          "toc.yml",
-          "*.md"
-        ],
-        "exclude": [
-          "LICENSE",
-          "obj/**",
-          "_site/**"
-        ]
-      }
+      { "files": [ "api/**.yml", "api/index.md" ] },
+      { "files": [ "docs/**.md", "docs/**/toc.yml" ], "exclude": [ "**/bin/**", "**/obj/**", "_site/**" ] },
+      { "files": [ "README.md", "CHANGELOG.md", "CONTRIBUTING.md" ] },
+      { "files": [ "toc.yml", "*.md" ], "exclude": [ "LICENSE", "obj/**", "_site/**" ] }
     ],
     "resource": [
-      {
-        "files": [
-          "images/**"
-        ],
-        "exclude": [
-          "**/bin/**",
-          "**/obj/**"
-        ]
-      },
-      {
-        "files": [
-          "docs/images/**"
-        ]
-      }
+      { "files": [ "images/**" ], "exclude": [ "**/bin/**", "**/obj/**" ] },
+      { "files": [ "docs/images/**" ] }
     ],
-    "output": "_site",
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "template": [
-      "default"
-    ],
-    "postProcessors": [],
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false,
+    "dest": "_site",
+    "template": [ "default" ],
     "globalMetadata": {
-      "_appTitle": "LIBRARY_NAME Documentation",
-      "_appName": "LIBRARY_NAME",
-      "_appFooter": "LIBRARY_COPYRIGHT",
+      "_appTitle": "Zentient.Metadata Documentation",
+      "_appName": "Zentient.Metadata",
+      "_appFooter": "Copyright © 2025 Zentient Framework Team. All rights reserved.",
       "_enableSearch": true,
       "_enableNewTab": true,
       "_disableNavbar": false,
@@ -101,14 +40,14 @@
       "_disableAffix": false,
       "_disableContribution": false,
       "_gitContribute": {
-        "repo": "REPOSITORY_URL",
+        "repo": "https://github.com/ulfbou/Zentient.Metadata",
         "branch": "main"
       },
       "_gitUrlPattern": "github",
       "_customMetadata": {
-        "company": "LIBRARY_COMPANY",
+        "company": "Zentient Framework Team",
         "version": "1.0.0",
-        "framework": "net8.0"
+        "framework": "net8.0;net9.0"
       }
     },
     "fileMetadata": {
@@ -119,7 +58,6 @@
         "api/**.md": "../toc.yml"
       }
     },
-    "dest": "_site",
     "markdownEngineName": "markdig",
     "markdownEngineProperties": {
       "markdigExtensions": [
