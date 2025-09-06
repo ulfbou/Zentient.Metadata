@@ -306,14 +306,20 @@ jobs:
         with:
           name: nuget-packages
           path: ./artifacts/
-
+  
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
-
+  
+      - name: Fail if NUGET_API_KEY is not set
+        if: ${{ !secrets.NUGET_API_KEY }}
+        run: |
+          echo "NUGET_API_KEY is not set! Aborting publish."
+          exit 1
+  
       - name: Publish to NuGet
-        if: ${{ env.NUGET_API_KEY != '' || secrets.NUGET_API_KEY != '' }}
+        if: ${{ secrets.NUGET_API_KEY }}
         run: |
           for package in ./artifacts/*.nupkg; do
             echo "Publishing $package"
