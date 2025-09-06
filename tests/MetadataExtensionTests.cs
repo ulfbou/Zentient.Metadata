@@ -13,7 +13,6 @@ using Zentient.Abstractions.Common.Definitions;
 using Zentient.Abstractions.Metadata;
 using Zentient.Abstractions.Metadata.Definitions;
 using Zentient.Metadata;
-using Zentient.Metadata.Extensions;
 
 namespace Zentient.Metadata.Tests
 {

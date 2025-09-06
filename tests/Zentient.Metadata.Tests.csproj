@@ -74,5 +74,4 @@
     <PackageReference Update="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
   </ItemGroup>
 
-</Project>
- 
+</Project> 
