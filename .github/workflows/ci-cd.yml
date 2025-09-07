@@ -163,13 +163,14 @@ jobs:
   pack-and-publish:
     name: Pack and Publish Packages
     runs-on: ubuntu-latest
+    needs: [build-and-test, code-quality, security]
     strategy:
       matrix:
         package:
           - src/Zentient.Metadata/Zentient.Metadata.csproj
           - src/Zentient.Metadata.Abstractions/Zentient.Metadata.Abstractions.csproj
           - src/Zentient.Metadata.Attributes/Zentient.Metadata.Attributes.csproj
-          - src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj
+          # - src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -223,10 +224,8 @@ jobs:
       - code-quality
       - security
       - benchmarks
-      - package
       - documentation
-      - release
-      - publish
+      - pack-and-publish
     steps:
       - name: Delete old artifacts
         uses: geekyeggo/delete-artifact@v2
