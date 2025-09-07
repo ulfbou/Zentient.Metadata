@@ -229,9 +229,8 @@ jobs:
       - name: Upload package artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: nuget-packages-${{ matrix.package }}
+          name: ${{ 'nuget-packages-' + matrix.package.replace('/', '-').replace('\\', '-') }}
           path: ${{ steps.find_nupkg.outputs.nupkg_path }}
-        if: ${{ !contains(matrix.package, '/') }}
       - name: Upload package artifacts (safe)
         if: ${{ contains(matrix.package, '/') }}
         uses: actions/upload-artifact@v4
@@ -242,7 +241,7 @@ jobs:
       - name: Upload symbol packages
         uses: actions/upload-artifact@v4
         with:
-          name: symbol-packages-${{ matrix.package }}
+          name: ${{ 'symbol-packages-' + matrix.package.replace('/', '-').replace('\\', '-') }}
           path: ${{ steps.find_snupkg.outputs.snupkg_path }}
         if: ${{ !contains(matrix.package, '/') }}
       - name: Upload symbol packages (safe)
