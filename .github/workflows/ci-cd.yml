@@ -15,12 +15,11 @@ env:
 
 jobs:
   build-and-test:
-    name: Build and Test (${{ matrix.dotnet-version }})
+    name: Build and Test
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
         configuration: [Debug, Release]
     steps:
       - name: Checkout code
@@ -30,14 +29,14 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 9.0.x
       - name: Cache NuGet packages
         uses: actions/cache@v3
         with:
           path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}-${{ matrix.dotnet-version }}-nuget-${{ hashFiles('**/packages.lock.json', '**/*.csproj') }}
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json', '**/*.csproj') }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.dotnet-version }}-nuget-
+            ${{ runner.os }}-nuget-
       - name: Restore dependencies
         run: dotnet restore
       - name: Build solution
@@ -56,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results-${{ matrix.dotnet-version }}-${{ matrix.configuration }}
+          name: test-results-${{ matrix.configuration }}
           path: TestResults/
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
@@ -67,12 +66,8 @@ jobs:
           name: codecov-umbrella
 
   code-quality:
-    name: Code Quality Analysis (${{ matrix.dotnet-version }})
+    name: Code Quality Analysis
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -81,14 +76,14 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 9.0.x
       - name: Cache NuGet packages
         uses: actions/cache@v3
         with:
           path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}-${{ matrix.dotnet-version }}-nuget-${{ hashFiles('**/packages.lock.json', '**/*.csproj') }}
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json', '**/*.csproj') }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.dotnet-version }}-nuget-
+            ${{ runner.os }}-nuget-
       - name: Restore dependencies
         run: dotnet restore
       - name: Run code analysis
@@ -99,19 +94,15 @@ jobs:
         run: dotnet format --verify-no-changes --verbosity diagnostic
 
   security:
-    name: Security Analysis (${{ matrix.dotnet-version }})
+    name: Security Analysis
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 9.0.x
       - name: Restore dependencies
         run: dotnet restore -v diag
       - name: Run vulnerability scan
@@ -121,20 +112,16 @@ jobs:
           dotnet restore --verbosity normal 2>&1 | grep -i "vulnerability\|security" || true
 
   benchmarks:
-    name: Performance Benchmarks (${{ matrix.dotnet-version }})
+    name: Performance Benchmarks
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 9.0.x
       - name: Restore dependencies
         run: dotnet restore -v diag
       - name: Run benchmarks
@@ -142,24 +129,20 @@ jobs:
       - name: Upload benchmark results
         uses: actions/upload-artifact@v4
         with:
-          name: benchmark-results-${{ matrix.dotnet-version }}
+          name: benchmark-results
           path: "**/BenchmarkDotNet.Artifacts/**/*"
 
   documentation:
-    name: Generate Documentation (${{ matrix.dotnet-version }})
+    name: Generate Documentation
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 9.0.x
       - name: Setup Node.js (for DocFX)
         uses: actions/setup-node@v3
         with:
@@ -190,7 +173,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: 9.0.x
       - name: Cache NuGet packages
         uses: actions/cache@v3
         with:
@@ -298,7 +281,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: 9.0.x
       - name: Publish to NuGet
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
