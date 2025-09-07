@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Linq;
 using Zentient.Abstractions.Metadata;
 using Zentient.Abstractions.Metadata.Definitions;
+using Zentient.Abstractions.Common.Metadata;
 
 namespace Zentient.Metadata.Attributes
 {
@@ -84,10 +85,10 @@ namespace Zentient.Metadata.Attributes
         {
             ArgumentNullException.ThrowIfNull(member);
             var builder = Metadata.Create();
-            var attributes = GetAttributes(member.GetType());
+            var attributes = member.GetCustomAttributes(false).OfType<Attribute>();
+
             foreach (var attribute in attributes)
             {
-                // Custom handler support
                 if (AttributeHandlerRegistry.TryHandle(attribute, new AttributeHandlerContext(builder)))
                     continue;
                 switch (attribute)
@@ -101,10 +102,10 @@ namespace Zentient.Metadata.Attributes
                     case MetadataTagAttribute tagAttribute:
                         builder.SetTag(tagAttribute.Key, tagAttribute.TagValue);
                         break;
-                    case Zentient.Abstractions.Common.Metadata.DefinitionCategoryAttribute legacyCat:
+                    case DefinitionCategoryAttribute legacyCat:
                         builder.SetTag("category", legacyCat.CategoryName);
                         break;
-                    case Zentient.Abstractions.Common.Metadata.DefinitionTagAttribute legacyTag:
+                    case DefinitionTagAttribute legacyTag:
                         builder.SetTag("tags", legacyTag.Tags);
                         break;
                     default:
