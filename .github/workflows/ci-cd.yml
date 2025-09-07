@@ -16,7 +16,7 @@ env:
 
 jobs:
   build-and-test:
-    name: Build and Test (${{ matrix.target-framework }})
+    name: Build and Test (${{ matrix.target-framework }} - ${{ matrix.configuration }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
@@ -40,9 +40,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}-${{ matrix.target-framework }}-nuget-${{ hashFiles('**/packages.lock.json', env.SOLUTION_FILE_NAME) }}
+          key: ${{ runner.os }}-${{ matrix.target-framework }}-${{ matrix.configuration }}-nuget-${{ hashFiles('**/packages.lock.json', env.SOLUTION_FILE_NAME) }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.target-framework }}-
+            ${{ runner.os }}-${{ matrix.target-framework }}-${{ matrix.configuration }}-
 
       - name: Restore dependencies
         run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
@@ -78,7 +78,7 @@ jobs:
         uses: codecov/codecov-action@v3
         if: matrix.configuration == 'Release'
         with:
-          files: TestResults/coverage/coverage.cobertura.xml
+          file: TestResults/coverage/coverage.cobertura.xml
           flags: ${{ matrix.target-framework }}
           fail_ci_if_error: true
 
@@ -165,14 +165,6 @@ jobs:
             8.0.x
             9.0.x
 
-      - name: Cache NuGet packages
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json', env.SOLUTION_FILE_NAME) }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-            
       - name: Restore dependencies
         run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
 
@@ -214,7 +206,7 @@ jobs:
           dotnet tool install Docfx
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
 
       - name: Generate documentation
         run: dotnet docfx build -o _site
