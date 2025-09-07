@@ -210,16 +210,19 @@ jobs:
           echo "::endgroup::"
           echo "snupkg_path=$(head -n 1 snupkg_paths.txt)" >> $GITHUB_OUTPUT
       - name: Publish to NuGet
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+        if: github.event_name == 'push' && (startsWith(github.ref, 'refs/tags/Zentient.Metadata-v') || startsWith(github.ref, 'refs/tags/Zentient.Metadata.Abstractions-v') || startsWith(github.ref, 'refs/tags/Zentient.Metadata.Attributes-v'))
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
-          for nupkg in ./artifacts/*.nupkg; do
-            echo "Publishing $nupkg"
-            dotnet nuget push "$nupkg" \
+          if [ -f ${{ steps.find_nupkg.outputs.nupkg_path }} ]; then
+            echo "Publishing ${{ steps.find_nupkg.outputs.nupkg_path }}"
+            dotnet nuget push "${{ steps.find_nupkg.outputs.nupkg_path }}" \
               --api-key "$NUGET_API_KEY" \
               --source https://api.nuget.org/v3/index.json \
               --skip-duplicate
+          else
+            echo "No .nupkg found to publish."
+          fi
       - name: Upload package artifacts
         uses: actions/upload-artifact@v4
         with:
