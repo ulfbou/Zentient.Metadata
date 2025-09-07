@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
+        dotnet-version: ['8.0.x', '9.0.304']
         configuration: [Debug, Release]
     steps:
       - name: Checkout code
@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
+        dotnet-version: ['8.0.x', '9.0.304']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -115,7 +115,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
+        dotnet-version: ['8.0.x', '9.0.304']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -141,7 +141,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     strategy:
       matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
+        dotnet-version: ['8.0.x', '9.0.304']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -169,7 +169,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     strategy:
       matrix:
-        dotnet-version: ['8.0.x', '9.0.x']
+        dotnet-version: ['8.0.x', '9.0.304']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
