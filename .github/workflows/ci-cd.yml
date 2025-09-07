@@ -22,7 +22,6 @@ jobs:
       matrix:
         dotnet-version: ['8.0.x', '9.0.x']
         configuration: [Debug, Release]
-        fail-fast: false
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
