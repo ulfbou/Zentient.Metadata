@@ -192,7 +192,23 @@ jobs:
       - name: Build package
         run: dotnet build ${{ matrix.package }} --configuration Release --no-restore
       - name: Pack package
-        run: dotnet pack ${{ matrix.package }} --configuration Release --no-build --output ./artifacts/ -v diag
+        run: dotnet pack ${{ matrix.package }} --configuration Release --no-build -v diag
+      - name: Find nupkg path
+        id: find_nupkg
+        run: |
+          echo "::group::Find nupkg"
+          find . -type f -name "*.nupkg" | grep -v ".snupkg" > nupkg_paths.txt
+          cat nupkg_paths.txt
+          echo "::endgroup::"
+          echo "nupkg_path=$(head -n 1 nupkg_paths.txt)" >> $GITHUB_OUTPUT
+      - name: Find snupkg path
+        id: find_snupkg
+        run: |
+          echo "::group::Find snupkg"
+          find . -type f -name "*.snupkg" > snupkg_paths.txt
+          cat snupkg_paths.txt
+          echo "::endgroup::"
+          echo "snupkg_path=$(head -n 1 snupkg_paths.txt)" >> $GITHUB_OUTPUT
       - name: Publish to NuGet
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
         env:
@@ -208,12 +224,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nuget-packages-${{ matrix.package }}
-          path: ./artifacts/*.nupkg
+          path: ${{ steps.find_nupkg.outputs.nupkg_path }}
       - name: Upload symbol packages
         uses: actions/upload-artifact@v4
         with:
           name: symbol-packages-${{ matrix.package }}
-          path: ./artifacts/*.snupkg
+          path: ${{ steps.find_snupkg.outputs.snupkg_path }}
 
   cleanup:
     name: Cleanup Artifacts
