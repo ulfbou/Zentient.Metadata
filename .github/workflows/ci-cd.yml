@@ -1,4 +1,5 @@
-name: CI/CD Pipeline
+---
+name: Unified CI/CD
 
 on:
   push:
@@ -9,399 +10,78 @@ on:
   workflow_dispatch:
 
 env:
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-  DOTNET_CLI_TELEMETRY_OPTOUT: true
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
-  SOLUTION_FILE_NAME: Zentient.Metadata.sln
 
 jobs:
-  build-and-test:
-    name: Build and Test (${{ matrix.target-framework }} - ${{ matrix.configuration }})
+  build-base-image:
+    name: Build Base Image
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        target-framework: ['net8.0', 'net9.0']
-        configuration: [Debug, Release]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          fetch-depth: 0
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Build and push image
+        uses: docker/build-push-action@v5
         with:
-          dotnet-version: |
-            8.0.x
-            9.0.x
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Cache NuGet packages
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}-${{ matrix.target-framework }}-${{ matrix.configuration }}-nuget-${{ hashFiles('**/packages.lock.json', env.SOLUTION_FILE_NAME) }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.target-framework }}-${{ matrix.configuration }}-
-
-      - name: Restore dependencies
-        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
-
-      - name: Build solution
-        run: >
-          dotnet build ${{ env.SOLUTION_FILE_NAME }}
-          --configuration ${{ matrix.configuration }}
-          --no-restore
-          --framework ${{ matrix.target-framework }}
-
-      - name: Run tests and generate code coverage
-        run: >
-          dotnet test ${{ env.SOLUTION_FILE_NAME }}
-          --configuration ${{ matrix.configuration }}
-          --no-build
-          --framework ${{ matrix.target-framework }}
-          --logger "trx;LogFileName=testresults.trx"
-          --results-directory ./TestResults/
-          /p:CollectCoverage=true
-          /p:CoverletOutput=./TestResults/coverage/
-          /p:CoverletOutputFormat=cobertura
-        if: always()
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results-${{ matrix.target-framework }}-${{ matrix.configuration }}
-          path: TestResults/
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        if: matrix.configuration == 'Release'
-        with:
-          file: TestResults/coverage/coverage.cobertura.xml
-          flags: ${{ matrix.target-framework }}
-          fail_ci_if_error: true
-
-  code-quality:
-    name: Code Quality Analysis (${{ matrix.target-framework }})
+  run-ci-checks:
+    name: Run CI Checks
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        target-framework: ['net8.0', 'net9.0']
+    needs: build-base-image
+    container: ghcr.io/${{ github.repository }}:latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Run Build and Tests
+        run: |
+          dotnet build --configuration Release -v diag
+          dotnet test --no-build --configuration Release --logger trx --results-directory ./TestResults/
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: |
-            8.0.x
-            9.0.x
+      - name: Run Code Analysis
+        run: dotnet build --configuration Release -p:RunCodeAnalysis=true -v diag
 
-      - name: Restore dependencies
-        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
+      - name: Run Security Scan
+        run: dotnet build --configuration Release -p:RunSecurityCodeAnalysis=true -v diag
 
-      - name: Run code analysis
-        run: >
-          dotnet build ${{ env.SOLUTION_FILE_NAME }}
-          --configuration Release
-          -p:RunCodeAnalysis=true
-          --framework ${{ matrix.target-framework }}
-
-      - name: Run security scan
-        run: >
-          dotnet build ${{ env.SOLUTION_FILE_NAME }}
-          --configuration Release
-          -p:RunSecurityCodeAnalysis=true
-          --framework ${{ matrix.target-framework }}
-
-      - name: Format check
+      - name: Run Format Check
         run: dotnet format --verify-no-changes --verbosity diagnostic
 
-  security:
-    name: Security Analysis (${{ matrix.target-framework }})
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        target-framework: ['net8.0', 'net9.0']
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Run Vulnerability Scan
+        run: dotnet list package --vulnerable --include-transitive
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: |
-            8.0.x
-            9.0.x
-
-      - name: Restore dependencies
-        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
-
-      - name: Run vulnerability scan
-        run: dotnet list package --vulnerable --include-transitive --format json
-
-  benchmarks:
-    name: Performance Benchmarks (${{ matrix.target-framework }})
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
-    strategy:
-      fail-fast: true
-      matrix:
-        target-framework: ['net8.0', 'net9.0']
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: |
-            8.0.x
-            9.0.x
-
-      - name: Restore dependencies
-        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
-
-      - name: Run benchmarks
-        run: >
-          dotnet build ${{ env.SOLUTION_FILE_NAME }}
-          --configuration Release
-          -p:PerformanceBenchmarkingEnabled=true
-          --framework ${{ matrix.target-framework }}
-
-      - name: Upload benchmark results
-        uses: actions/upload-artifact@v4
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: benchmark-results-${{ matrix.target-framework }}
-          path: "**/BenchmarkDotNet.Artifacts/**/*"
+          name: test-results
+          path: TestResults/
 
-  documentation:
-    name: Generate Documentation
+  package-and-publish:
+    name: Package and Publish
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: run-ci-checks
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    container: ghcr.io/${{ github.repository }}:latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Setup Node.js (for DocFX)
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install DocFX
-        run: |
-          dotnet new tool-manifest
-          dotnet tool install Docfx
-
       - name: Restore dependencies
-        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
-
-      - name: Generate documentation
-        run: dotnet docfx build -o _site
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-
-  package:
-    name: Create Package
-    runs-on: ubuntu-latest
-    needs: [build-and-test, code-quality, security]
-    if: github.event_name == 'push' && (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main')
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: |
-            8.0.x
-            9.0.x
-
-      - name: Cache NuGet packages
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.NUGET_PACKAGES }}
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json', env.SOLUTION_FILE_NAME) }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-
-      - name: Restore dependencies
-        run: dotnet restore ${{ env.SOLUTION_FILE_NAME }}
-
-      - name: Generate version
-        id: version
-        run: |
-          if [[ $GITHUB_REF == refs/tags/v* ]]; then
-            VERSION=${GITHUB_REF#refs/tags/v}
-            echo "version=$VERSION" >> $GITHUB_OUTPUT
-            echo "prerelease=false" >> $GITHUB_OUTPUT
-          else
-            VERSION="1.0.0-dev.$GITHUB_RUN_NUMBER"
-            echo "version=$VERSION" >> $GITHUB_OUTPUT
-            echo "prerelease=true" >> $GITHUB_OUTPUT
-          fi
-
+        run: dotnet restore -v diag
+      
       - name: Create package
-        run: >
-          dotnet pack
-          --configuration Release
-          --no-restore
-          -p:PackageVersion=${{ steps.version.outputs.version }}
-          -p:IncludeSymbols=true
-          -p:SymbolPackageFormat=snupkg
-          --output ./artifacts/
+        run: dotnet pack --configuration Release -o artifacts/
 
-      - name: Upload package artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: nuget-packages
-          path: artifacts/*.nupkg
-          
-      - name: Upload symbol packages
-        uses: actions/upload-artifact@v4
-        with:
-          name: symbol-packages
-          path: artifacts/*.snupkg
-
-  release:
-    name: Create Release
-    runs-on: ubuntu-latest
-    needs: [package]
-    if: startsWith(github.ref, 'refs/tags/v')
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Download package artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: nuget-packages
-          path: ./artifacts/
-
-      - name: Download symbol packages
-        uses: actions/download-artifact@v4
-        with:
-          name: symbol-packages
-          path: ./artifacts/
-
-      - name: Extract release notes
-        id: release_notes
-        run: |
-          VERSION=${GITHUB_REF#refs/tags/v}
-          CHANGELOG_FILE="CHANGELOG.md"
-          OUTPUT_FILE="release-notes-${VERSION}.md"
-
-          # Use awk for robust extraction to a temporary file
-          awk '/^## \['${VERSION}'\]/{flag=1;next}/^## \[/{flag=0}flag' "$CHANGELOG_FILE" > "$OUTPUT_FILE.tmp"
-          
-          # Clean up the temporary file (remove leading/trailing spaces and empty lines)
-          sed -i -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' "$OUTPUT_FILE.tmp"
-          sed -i '/^$/d' "$OUTPUT_FILE.tmp"
-
-          if [ ! -s "$OUTPUT_FILE.tmp" ]; then
-              echo "No release notes found for version $VERSION. Using fallback message."
-              echo "No release notes available for this version." > "$OUTPUT_FILE"
-              echo "body_path=$OUTPUT_FILE" >> $GITHUB_OUTPUT
-          else
-              mv "$OUTPUT_FILE.tmp" "$OUTPUT_FILE"
-              echo "body_path=$OUTPUT_FILE" >> $GITHUB_OUTPUT
-          fi
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: Release ${{ steps.release_notes.outputs.version }}
-          body_path: ${{ steps.release_notes.outputs.body_path }}
-          files: |
-            artifacts/*.nupkg
-            artifacts/*.snupkg
-          draft: false
-          prerelease: false
-
-  publish:
-    name: Publish to NuGet
-    runs-on: ubuntu-latest
-    needs: [release]
-    if: startsWith(github.ref, 'refs/tags/v')
-    environment: production
-    steps:
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Download package artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: nuget-packages
-          path: ./artifacts/
-          
-      - name: Download symbol packages
-        uses: actions/download-artifact@v4
-        with:
-          name: symbol-packages
-          path: ./artifacts/
-    
       - name: Publish to NuGet
-        env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        run: |
-          if [ -z "$NUGET_API_KEY" ]; then
-            echo "NUGET_API_KEY is not set. Skipping publish."
-            exit 0
-          fi
-          for nupkg in ./artifacts/*.nupkg; do
-            echo "Publishing $nupkg"
-            dotnet nuget push "$nupkg" \
-              --api-key "$NUGET_API_KEY" \
-              --source https://api.nuget.org/v3/index.json \
-              --skip-duplicate
-          done
-          for snupkg in ./artifacts/*.snupkg; do
-            echo "Publishing $snupkg"
-            dotnet nuget push "$snupkg" \
-              --api-key "$NUGET_API_KEY" \
-              --source https://api.nuget.org/v3/index.json \
-              --skip-duplicate
-          done
-
-  cleanup:
-    name: Cleanup Artifacts
-    runs-on: ubuntu-latest
-    if: always()
-    needs:
-      - build-and-test
-      - code-quality
-      - security
-      - benchmarks
-    steps:
-      - name: Delete old artifacts
-        uses: geekyeggo/delete-artifact@v2
-        with:
-          name: |
-            test-results-*
-            benchmark-results-*
-          failOnError: false
+        run: dotnet nuget push "artifacts/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
