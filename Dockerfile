@@ -31,9 +31,8 @@ COPY .config ./
 # Restore dependencies for all projects
 RUN dotnet restore
 
-# Build all projects for both Debug and Release
-RUN dotnet build --configuration Debug --no-restore
-RUN dotnet build --configuration Release --no-restore
+# Build all projects for Release configuration
+RUN dotnet build --configuration Release -v minimal --no-restore
 
-# Run tests for both target frameworks and configurations
-RUN dotnet test --configuration
+# Run tests using the built artifacts in Release configuration
+RUN dotnet test --no-build --configuration Release -v minimal
