@@ -10,11 +10,6 @@ on:
 
 env:
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
-  MAIN_PROJECT: src/Zentient.Metadata/Zentient.Metadata.csproj
-  ABSTRACTIONS_PROJECT: src/Zentient.Metadata.Abstractions/Zentient.Metadata.Abstractions.csproj
-  ATTRIBUTES_PROJECT: src/Zentient.Metadata.Attributes/Zentient.Metadata.Attributes.csproj
-  METADATA_PROJECT: src/Zentient.Metadata/Zentient.Metadata.csproj
-  TEST_PROJECT: tests/Zentient.Metadata.Tests.csproj
 
 jobs:
   build-base-image:
@@ -59,50 +54,47 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Debug List files in workspace
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Listing all files recursively:"
-          find .
-
-      - name: Build Zentient.Metadata.Abstractions
-        run: dotnet build ${{ env.ABSTRACTIONS_PROJECT }} --configuration Release -v normal
-
-      - name: Build Zentient.Metadata.Attributes
-        run: dotnet build ${{ env.ATTRIBUTES_PROJECT }} --configuration Release -v normal
-
-      - name: Build Zentient.Metadata
-        run: dotnet build ${{ env.METADATA_PROJECT }} --configuration Release -v normal
+      - name: Build all projects
+        run: dotnet build --configuration Release -v normal
 
       - name: Ensure TestResults directory exists
         run: mkdir -p TestResults
 
-      - name: Run Tests
+      - name: Run all tests
         run: |
-          dotnet test ${{ env.TEST_PROJECT }} --no-build --configuration Release --logger trx --results-directory ./TestResults/
+          for proj in $(find . -name "*.Tests.csproj"); do
+            dotnet test "$proj" --no-build --configuration Release --logger trx --results-directory ./TestResults/;
+          done
 
-      - name: Debug List test results
+      - name: List test results
         run: |
           if [ -d ./TestResults ]; then ls -l ./TestResults; else echo "TestResults directory does not exist"; fi
 
-      - name: Run Code Analysis
-        run: dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -p:RunCodeAnalysis=true -v normal
+      - name: Run code analysis
+        run: dotnet build --configuration Release -p:RunCodeAnalysis=true -v normal
 
-      - name: Run Security Scan
-        run: dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -p:RunSecurityCodeAnalysis=true -v normal
+      - name: Run security scan
+        run: dotnet build --configuration Release -p:RunSecurityCodeAnalysis=true -v normal
 
-      - name: Run Format Check
+      - name: Run format check
         run: dotnet format --verify-no-changes --verbosity diagnostic
 
-      - name: Run Vulnerability Scan
+      - name: Run vulnerability scan
         run: dotnet list package --vulnerable --include-transitive
 
-      - name: Upload Test Results
+      - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results
           path: TestResults/
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-artifacts
+          path: artifacts/
 
   package-and-publish:
     name: Package and Publish
@@ -115,10 +107,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Restore dependencies
-        run: dotnet restore ${{ env.MAIN_PROJECT }} -v normal
+        run: dotnet restore --configuration Release -v normal
       
-      - name: Create package
-        run: dotnet pack ${{ env.MAIN_PROJECT }} --configuration Release -o artifacts/
+      - name: Create main package
+        run: dotnet pack src/Zentient.Metadata/Zentient.Metadata.csproj --configuration Release -o artifacts/
+
+      - name: Create analyzer package
+        run: dotnet pack src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj --configuration Release -o artifacts/
 
       - name: Publish to NuGet
         run: dotnet nuget push "artifacts/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
