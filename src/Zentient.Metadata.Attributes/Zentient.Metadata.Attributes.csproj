@@ -12,8 +12,8 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
     <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <IsPackable Condition="'$(IsPackable)' == '' AND '$(OutputType)' == 'Library'">true</IsPackable>
-    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release' AND '$(IsPackable)' == 'true'">true</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
     <EnableSigning Condition="'$(EnableSigning)' == ''">true</EnableSigning>
     <EnableTesting Condition="'$(EnableTesting)' == ''">true</EnableTesting>
     <EnableQuality Condition="'$(EnableQuality)' == ''">true</EnableQuality>

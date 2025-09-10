@@ -2,7 +2,8 @@ name: Unified CI/CD
 
 on:
   push:
-    branches: [main, develop]
+    branches: [develop]
+    tags: [ 'v*' ]   # triggers on version tags (e.g. v1.0.0)
   pull_request:
     branches: [main, develop]
   workflow_dispatch:
@@ -11,9 +12,35 @@ env:
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
 jobs:
+  cancel-previous-runs:
+    name: Cancel Previous Runs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.12.1
+        with:
+          access_token: ${{ github.token }}
+
+  debug-system-info:
+    name: Debug System Info
+    runs-on: ubuntu-latest
+    needs: cancel-previous-runs
+    steps:
+      - name: Print system info
+        run: |
+          echo "==== UNAME ===="
+          uname -a
+          echo "==== LSB RELEASE ===="
+          lsb_release -a || cat /etc/os-release || false
+          echo "==== DOTNET INFO ===="
+          dotnet --info || false
+          echo "==== ENVIRONMENT ===="
+          env
+
   build-base-image:
     name: Build Base Image
     runs-on: ubuntu-latest
+    needs: debug-system-info
     outputs:
       repo_lc: ${{ steps.lowercase-repo.outputs.repo_lc }}
     steps:
@@ -109,43 +136,82 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Print .NET info
+        run: dotnet --info
+
+      - name: Show project dir & csproj head
+        run: |
+          echo "PWD: $(pwd)"
+          ls -la src || true
+          echo "---- Zentient.Metadata.csproj ----"
+          sed -n '1,200p' src/Zentient.Metadata/Zentient.Metadata.csproj || true
+          echo "---- Zentient.Metadata.Analyzers.csproj ----"
+          sed -n '1,200p' src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj || true
+
+      - name: Check IsPackable flags
+        run: |
+          grep -R "<IsPackable" -n src || echo "No IsPackable flags found"
+
       - name: Clean artifacts folder
         run: rm -rf artifacts/* || true
 
-      - name: Restore dependencies
-        run: dotnet restore -v normal
+      - name: Ensure artifacts dir
+        run: mkdir -p artifacts
 
-      - name: Create main package
-        run: dotnet pack src/Zentient.Metadata/Zentient.Metadata.csproj --configuration Release -o artifacts/
+      - name: Restore (diagnostic)
+        run: dotnet restore -v minimal
 
-      - name: Create analyzer package
-        run: dotnet pack src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj --configuration Release -o artifacts/
+      - name: Build solution (Release)
+        run: dotnet build --configuration Release -v minimal
 
-      - name: Upload NuGet packages as artifacts
+      - name: Pack main project (diagnostic)
+        run: |
+          dotnet pack src/Zentient.Metadata/Zentient.Metadata.csproj \
+            --configuration Release \
+            --output artifacts \
+            --include-symbols --include-source -v diag || true
+
+      - name: Pack analyzer project (diagnostic)
+        run: |
+          dotnet pack src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj \
+            --configuration Release \
+            --output artifacts \
+            --include-symbols --include-source -v diag || true
+
+      - name: Show artifacts directory
+        run: |
+          echo "Artifact dir: $(pwd)/artifacts"
+          ls -la artifacts || true
+          find artifacts -maxdepth 2 -type f -print -ls || true
+
+      - name: Upload NuGet packages as artifacts (if any)
         uses: actions/upload-artifact@v4
         with:
           name: nuget-packages
           path: artifacts/
 
-      - name: Upload documentation
-        uses: actions/upload-artifact@v4
-        with:
-          name: documentation
-          path: |
-            CHANGELOG.md
-            src/Zentient.Metadata/README.md
-            src/Zentient.Metadata.Analyzers/README.md
-            src/Zentient.Metadata.Abstractions/README.md
-            src/Zentient.Metadata.Attributes/README.md
+      - name: Publish any packages to NuGet (safe loop)
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          shopt -s nullglob
+          pushed=0
+          for f in artifacts/*.nupkg artifacts/*.snupkg; do
+            [ -e "$f" ] || continue
+            echo "Pushing $f"
+            dotnet nuget push "$f" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
+            pushed=1
+          done
+          if [ "$pushed" -eq 0 ]; then
+            echo "No packages found to push."
+          fi
 
-      - name: Publish to NuGet
-        run: dotnet nuget push "artifacts/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
-
-      - name: Create GitHub Release
+      - name: Create GitHub Release (attach artifacts if present)
         uses: softprops/action-gh-release@v2
         with:
           files: |
             artifacts/*.nupkg
+            artifacts/*.snupkg
             CHANGELOG.md
             src/Zentient.Metadata/README.md
             src/Zentient.Metadata.Analyzers/README.md
@@ -154,30 +220,3 @@ jobs:
           body_path: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  preview-packages:
-    name: Preview Packages
-    runs-on: ubuntu-latest
-    needs: run-ci-checks
-    if: github.event_name == 'pull_request' || (github.event_name == 'push' && !startsWith(github.ref, 'refs/tags/v'))
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Clean artifacts folder
-        run: rm -rf artifacts/* || true
-
-      - name: Restore dependencies
-        run: dotnet restore -v normal
-
-      - name: Create main preview package
-        run: dotnet pack src/Zentient.Metadata/Zentient.Metadata.csproj --configuration Release -o artifacts/ --version-suffix preview
-
-      - name: Create analyzer preview package
-        run: dotnet pack src/Zentient.Metadata.Analyzers/Zentient.Metadata.Analyzers.csproj --configuration Release -o artifacts/ --version-suffix preview
-
-      - name: Upload preview NuGet packages
-        uses: actions/upload-artifact@v4
-        with:
-          name: preview-nuget-packages
-          path: artifacts/
