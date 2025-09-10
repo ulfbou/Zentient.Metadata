@@ -10,7 +10,7 @@ on:
 
 env:
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
-  SOLUTION_FILE: Zentient.Metadata.sln
+  SOLUTION_FILE: src/Zentient.Metadata/Zentient.Metadata.sln
 
 jobs:
   build-base-image:
@@ -52,6 +52,12 @@ jobs:
     needs: build-base-image
     container: ghcr.io/${{ needs.build-base-image.outputs.repo_lc }}:latest
     steps:
+      - name: Debug: List files in workspace
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Listing all files recursively:"
+          find .
+
       - name: Run Build and Tests
         run: |
           dotnet build ${{ env.SOLUTION_FILE }} --configuration Release -v diag
