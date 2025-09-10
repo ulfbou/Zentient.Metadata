@@ -115,7 +115,7 @@ jobs:
         run: rm -rf artifacts/* || true
 
       - name: Restore dependencies
-        run: dotnet restore --configuration Release -v normal
+        run: dotnet restore -v normal
 
       - name: Create main package
         run: dotnet pack src/Zentient.Metadata/Zentient.Metadata.csproj --configuration Release -o artifacts/
@@ -146,7 +146,7 @@ jobs:
         run: rm -rf artifacts/* || true
 
       - name: Restore dependencies
-        run: dotnet restore --configuration Release -v normal
+        run: dotnet restore -v normal
 
       - name: Create main preview package
         run: dotnet pack src/Zentient.Metadata/Zentient.Metadata.csproj --configuration Release -o artifacts/ --version-suffix preview
