@@ -10,6 +10,7 @@ on:
 
 env:
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+  SOLUTION_FILE: Zentient.Metadata.sln
 
 jobs:
   build-base-image:
@@ -53,14 +54,14 @@ jobs:
     steps:
       - name: Run Build and Tests
         run: |
-          dotnet build --configuration Release -v diag
-          dotnet test --no-build --configuration Release --logger trx --results-directory ./TestResults/
+          dotnet build ${{ env.SOLUTION_FILE }} --configuration Release -v diag
+          dotnet test ${{ env.SOLUTION_FILE }} --no-build --configuration Release --logger trx --results-directory ./TestResults/
 
       - name: Run Code Analysis
-        run: dotnet build --configuration Release -p:RunCodeAnalysis=true -v diag
+        run: dotnet build ${{ env.SOLUTION_FILE }} --configuration Release -p:RunCodeAnalysis=true -v diag
 
       - name: Run Security Scan
-        run: dotnet build --configuration Release -p:RunSecurityCodeAnalysis=true -v diag
+        run: dotnet build ${{ env.SOLUTION_FILE }} --configuration Release -p:RunSecurityCodeAnalysis=true -v diag
 
       - name: Run Format Check
         run: dotnet format --verify-no-changes --verbosity diagnostic
@@ -83,10 +84,10 @@ jobs:
     container: ghcr.io/${{ needs.build-base-image.outputs.repo_lc }}:latest
     steps:
       - name: Restore dependencies
-        run: dotnet restore -v diag
+        run: dotnet restore ${{ env.SOLUTION_FILE }} -v diag
       
       - name: Create package
-        run: dotnet pack --configuration Release -o artifacts/
+        run: dotnet pack ${{ env.SOLUTION_FILE }} --configuration Release -o artifacts/
 
       - name: Publish to NuGet
         run: dotnet nuget push "artifacts/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
