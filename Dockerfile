@@ -4,7 +4,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
 # Create a non-root user for security best practices
-USER app
+# USER app
 
 # Set the working directory
 WORKDIR /app
