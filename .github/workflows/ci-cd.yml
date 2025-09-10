@@ -52,6 +52,9 @@ jobs:
     needs: build-base-image
     container: ghcr.io/${{ needs.build-base-image.outputs.repo_lc }}:latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: (Debug) List files in workspace
         run: |
           echo "Current directory: $(pwd)"
@@ -89,6 +92,9 @@ jobs:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     container: ghcr.io/${{ needs.build-base-image.outputs.repo_lc }}:latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Restore dependencies
         run: dotnet restore ${{ env.MAIN_PROJECT }} -v diag
       
