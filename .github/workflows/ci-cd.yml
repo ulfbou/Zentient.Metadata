@@ -11,6 +11,10 @@ on:
 env:
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
   MAIN_PROJECT: src/Zentient.Metadata/Zentient.Metadata.csproj
+  ABSTRACTIONS_PROJECT: src/Zentient.Metadata.Abstractions/Zentient.Metadata.Abstractions.csproj
+  ATTRIBUTES_PROJECT: src/Zentient.Metadata.Attributes/Zentient.Metadata.Attributes.csproj
+  METADATA_PROJECT: src/Zentient.Metadata/Zentient.Metadata.csproj
+  TEST_PROJECT: tests/Zentient.Metadata.Tests.csproj
 
 jobs:
   build-base-image:
@@ -55,25 +59,37 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: (Debug) List files in workspace
+      - name: Debug List files in workspace
         run: |
           echo "Current directory: $(pwd)"
           echo "Listing all files recursively:"
           find .
 
-      - name: Run Build and Tests
-        run: |
-          dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -v diag
-          dotnet test ${{ env.MAIN_PROJECT }} --no-build --configuration Release --logger trx --results-directory ./TestResults/
+      - name: Build Zentient.Metadata.Abstractions
+        run: dotnet build ${{ env.ABSTRACTIONS_PROJECT }} --configuration Release -v normal
 
-      - name: (Debug) List test results
-        run: ls -l ./TestResults
+      - name: Build Zentient.Metadata.Attributes
+        run: dotnet build ${{ env.ATTRIBUTES_PROJECT }} --configuration Release -v normal
+
+      - name: Build Zentient.Metadata
+        run: dotnet build ${{ env.METADATA_PROJECT }} --configuration Release -v normal
+
+      - name: Ensure TestResults directory exists
+        run: mkdir -p TestResults
+
+      - name: Run Tests
+        run: |
+          dotnet test ${{ env.TEST_PROJECT }} --no-build --configuration Release --logger trx --results-directory ./TestResults/
+
+      - name: Debug List test results
+        run: |
+          if [ -d ./TestResults ]; then ls -l ./TestResults; else echo "TestResults directory does not exist"; fi
 
       - name: Run Code Analysis
-        run: dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -p:RunCodeAnalysis=true -v diag
+        run: dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -p:RunCodeAnalysis=true -v normal
 
       - name: Run Security Scan
-        run: dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -p:RunSecurityCodeAnalysis=true -v diag
+        run: dotnet build ${{ env.MAIN_PROJECT }} --configuration Release -p:RunSecurityCodeAnalysis=true -v normal
 
       - name: Run Format Check
         run: dotnet format --verify-no-changes --verbosity diagnostic
@@ -99,7 +115,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Restore dependencies
-        run: dotnet restore ${{ env.MAIN_PROJECT }} -v diag
+        run: dotnet restore ${{ env.MAIN_PROJECT }} -v normal
       
       - name: Create package
         run: dotnet pack ${{ env.MAIN_PROJECT }} --configuration Release -o artifacts/
