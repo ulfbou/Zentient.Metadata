@@ -1,12 +1,21 @@
 # syntax=docker/dockerfile:1
 
-# Use the official Microsoft .NET 9.0 SDK image (includes .NET 8.0 and 9.0)
+# Start with .NET 9.0 SDK image (contains only .NET 9.0 by default)
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
-# Create a non-root user for security best practices
-# USER app
+# Install .NET 8.0 SDK and runtime
+RUN apt-get update && \
+    apt-get install -y wget && \
+    wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh && \
+    bash dotnet-install.sh --version 8.0.100 --install-dir /usr/share/dotnet && \
+    rm dotnet-install.sh && \
+    rm -rf /var/lib/apt/lists/*
 
-# Set the working directory
+# Ensure all installed SDKs and runtimes are discoverable
+ENV PATH="/usr/share/dotnet:${PATH}"
+ENV DOTNET_ROOT=/usr/share/dotnet
+
+# Set up working directory
 WORKDIR /app
 
 # Copy global.json to pin SDK version (if present)
@@ -27,8 +36,4 @@ RUN dotnet build --configuration Debug --no-restore
 RUN dotnet build --configuration Release --no-restore
 
 # Run tests for both target frameworks and configurations
-RUN dotnet test --configuration Debug --no-build --verbosity normal
-RUN dotnet test --configuration Release --no-build --verbosity normal
-
-# The image is for CI/CD build/test only, not for running apps
-# No ENTRYPOINT or CMD is set
+RUN dotnet test --configuration
