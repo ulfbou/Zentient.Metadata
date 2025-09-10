@@ -33,7 +33,7 @@
     <AssemblyTitle>Zentient.Metadata.Attributes</AssemblyTitle>
     <Description>Attribute-based metadata for Zentient Framework. Implements the Zentient.Metadata Attribute Specification, supporting legacy and cross-package attributes. See README.md, CHANGELOG.md, and docs/Zentient_Metadata_Metadata-Attribute-Specification.md for details.</Description>
     <Company>Zentient Framework Team</Company>
-    <Authors>Zentient Framework Team</Authors>
+    <Authors>Ulf Bourelius;Zentient Framework Team</Authors>
     <Copyright>Copyright © 2025 Zentient Framework Team. All rights reserved.</Copyright>
     <PackageProjectUrl>https://github.com/ulfbou/Zentient.Metadata.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ulfbou/Zentient.Metadata.git</RepositoryUrl>
@@ -45,6 +45,7 @@
     <FileVersion>$(VersionPrefix).0</FileVersion>
     <InformationalVersion>$(Version)</InformationalVersion>
     <PackageDocumentationFile>docs/Zentient_Metadata_Metadata-Attribute-Specification.md</PackageDocumentationFile>
+    <PackageAuthors>Ulf Bourelius;Zentient Framework Team</PackageAuthors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -55,10 +56,9 @@
     <ProjectReference Include="..\Zentient.Metadata\Zentient.Metadata.csproj" />
   </ItemGroup>
 
+  <!-- Exclude usage-examples.md from packing to avoid duplicate pack error -->
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="" />
-    <None Include="CHANGELOG.md" Pack="true" PackagePath="" />
-    <None Include="docs\Zentient_Metadata_Metadata-Attribute-Specification.md" Pack="true" PackagePath="docs\" />
+    <None Remove="docs/usage-examples.md" />
   </ItemGroup>
 
   <!-- Imports -->

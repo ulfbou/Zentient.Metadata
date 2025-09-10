@@ -19,6 +19,7 @@
     <Copyright>Copyright © 2025 Zentient Framework Team. All rights reserved.</Copyright>
     <PackageProjectUrl>https://github.com/ulfbou/Zentient.Metadata.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ulfbou/Zentient.Metadata.git</RepositoryUrl>
+    <PackageAuthors>Ulf Bourelius;Zentient Framework Team</PackageAuthors>
     <PackageReleaseNotes>See CHANGELOG.md for release notes and docs/ for full specification.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

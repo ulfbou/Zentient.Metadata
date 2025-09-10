@@ -3,7 +3,7 @@ name: Unified CI/CD
 on:
   push:
     branches: [develop]
-    tags: [ 'v*' ]   # triggers on version tags (e.g. v1.0.0)
+    tags: [ 'v*' ]
   pull_request:
     branches: [main, develop]
   workflow_dispatch:
