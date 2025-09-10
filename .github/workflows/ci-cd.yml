@@ -52,7 +52,7 @@ jobs:
     needs: build-base-image
     container: ghcr.io/${{ needs.build-base-image.outputs.repo_lc }}:latest
     steps:
-      - name: Debug: List files in workspace
+      - name: (Debug) List files in workspace
         run: |
           echo "Current directory: $(pwd)"
           echo "Listing all files recursively:"
