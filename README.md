@@ -1,8 +1,12 @@
 # Zentient.Metadata
 
+<<<<<<< HEAD
 A modern, extensible metadata platform for .NET. This monorepo contains the core packages used to declare, compose, discover, and analyze metadata in libraries and applications.
 
 [![CI](https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml/badge.svg)](.github/workflows/ci-cd.yml)
+=======
+[![.github/workflows/ci-cd.yml](https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml)
+>>>>>>> origin/main
 [![NuGet](https://img.shields.io/nuget/v/Zentient.Metadata.svg)](https://www.nuget.org/packages/Zentient.Metadata)
 
 What’s inside
