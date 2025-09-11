@@ -120,27 +120,36 @@ jobs:
         id: pkgver
         run: |
           set -euo pipefail
+          echo "DEBUG: determining package version (grep limited to src/)"
           if [[ "${{ github.ref }}" == refs/tags/* ]]; then
             # Strip v prefix if present: refs/tags/v1.2.3 -> 1.2.3
             tag=${GITHUB_REF#refs/tags/}
             ver=${tag#v}
+            echo "DEBUG: detected tag -> ver=$ver"
           else
-            # Try to derive a base semantic version from any VersionPrefix in the repo
-            base=$(git grep -m1 "<VersionPrefix>" || true)
-            if [ -n "$base" ]; then
+            # Search only inside src/ for VersionPrefix to avoid matching README/workflow files
+            raw=$(grep -R -m1 "<VersionPrefix>" src || true)
+            echo "DEBUG: raw grep result: '$raw'"
+            if [ -n "$raw" ]; then
               # extract using sed: <VersionPrefix>1.2.3</VersionPrefix>
-              base=$(git grep -m1 "<VersionPrefix>" | sed -E 's/.*<VersionPrefix>([^<]+)<\/VersionPrefix>.*/\1/')
+              extracted=$(echo "$raw" | sed -E 's/.*<VersionPrefix>([^<]+)<\/VersionPrefix>.*/\1/')
+              echo "DEBUG: sed extracted: '$extracted'"
+              ver="$extracted"
             else
-              base="0.0.0"
+              ver="0.0.0"
+              echo "DEBUG: no VersionPrefix found in src/, defaulting to $ver"
             fi
             shortsha=$(git rev-parse --short=8 HEAD)
             date=$(date -u +%Y%m%d%H%M)
-            ver="${base}-ci.${date}.${shortsha}"
+            # Only append CI suffix when not tagging
+            ver="${ver}-ci.${date}.${shortsha}"
+            echo "DEBUG: composed ver=$ver"
           fi
           # sanitize: remove CR to avoid file-command format errors
           ver=$(printf "%s" "$ver" | tr -d '\r')
           # persist version to workspace file for later steps
           echo "$ver" > version.txt
+          echo "DEBUG: written version.txt contents:"; cat version.txt
 
       - name: Create artifacts dir
         run: mkdir -p artifacts
