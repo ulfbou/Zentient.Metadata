@@ -27,8 +27,11 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Install DocFX
-        run: dotnet tool update -g docfx
+      - name: Install DocFX (pinned version)
+        run: dotnet tool install -g docfx --version 2.77.0
+
+      - name: Add .dotnet/tools to PATH
+        run: echo "${HOME}/.dotnet/tools" >> $GITHUB_PATH
 
       - name: Build documentation
         run: docfx docfx.json --output _site
@@ -55,17 +58,15 @@ jobs:
           name: docfx-site
           path: _site
 
-      # Optional: Deploy to GitHub Pages (uncomment to enable)
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v4
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: _site
-      #     publish_branch: gh-pages
-      #     force_orphan: true
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site
+          publish_branch: gh-pages
+          force_orphan: true
 
 # Notes:
 # - This workflow only triggers on manual runs, pushes to docs/*, docfx.json, assets/*, or new releases.
 # - All docs, markdown, yaml, and static assets are included in the published site.
-# - To preview docs for a PR, run this workflow manually and download the artifact.
-# - To enable GitHub Pages, uncomment the deploy step and configure your repo's Pages settings.
+# - Documentation is published to the gh-pages branch for GitHub Pages hosting.
