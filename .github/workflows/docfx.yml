@@ -19,6 +19,8 @@ jobs:
   build-docfx:
     name: Build DocFX Documentation
     runs-on: ubuntu-latest
+    env:
+      SOLUTION: Zentient.Metadata.sln
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,6 +29,19 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9.0.100'
+
+      - name: Also install .NET 8.0 SDK (required to build net8.0 outputs)
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore and build solution for DocFX metadata extraction
+        run: |
+          set -euo pipefail
+          echo "Restoring solution $SOLUTION"
+          dotnet restore "$SOLUTION"
+          echo "Building solution for net8.0 (release) to provide assemblies for DocFX"
+          dotnet build "$SOLUTION" -c Release -f net8.0
 
       - name: Dotnet info (diagnostic)
         run: dotnet --info
@@ -39,7 +54,6 @@ jobs:
 
       - name: Build documentation
         run: docfx docfx.json --output _site
-
       - name: Copy additional documentation (Markdown, YAML, images)
         run: |
           set -euo pipefail
