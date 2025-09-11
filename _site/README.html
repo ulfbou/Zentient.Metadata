@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Zentient.Metadata | Zentient.Metadata Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Zentient.Metadata | Zentient.Metadata Documentation ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="Zentient.Metadata">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="zentient.metadata">Zentient.Metadata</h1>
+
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+A modern, extensible metadata platform for .NET. This monorepo contains the core packages used to declare, compose, discover, and analyze metadata in libraries and applications.</p>
+<h1 id="ci"><a href=".github/workflows/ci-cd.yml"><img src="https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml/badge.svg" alt="CI"></a></h1>
+<p><a href="https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml"><img src="https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml/badge.svg" alt=".github/workflows/ci-cd.yml"></a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>origin/main
+<a href="https://www.nuget.org/packages/Zentient.Metadata"><img src="https://img.shields.io/nuget/v/Zentient.Metadata.svg" alt="NuGet"></a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>What’s inside</p>
+<ul>
+<li>Zentient.Metadata — Core metadata engine (immutable metadata, fluent builder, scanners)</li>
+<li>Zentient.Metadata.Attributes — Attribute-based metadata discovery and conversion</li>
+<li>Zentient.Metadata.Abstractions — Interfaces and contracts used across packages</li>
+<li>Zentient.Metadata.Analyzers — Roslyn analyzers for best practices and correctness</li>
+<li>Zentient.Metadata.Diagnostics — Diagnostic helpers and profiles</li>
+</ul>
+<p>Goals</p>
+<ul>
+<li>Provide a small, stable set of abstractions for metadata composition and discovery</li>
+<li>Offer a flexible runtime model with first-class support for attribute-driven metadata</li>
+<li>Deliver tooling (analyzers and diagnostics) to improve developer experience</li>
+</ul>
+<p>Quick start</p>
+<ol>
+<li>Add the package you need:</li>
+</ol>
+<pre><code class="lang-bash">dotnet add package Zentient.Metadata
+# or
+dotnet add package Zentient.Metadata.Attributes
+</code></pre>
+<ol start="2">
+<li>Build metadata using the fluent API:</li>
+</ol>
+<pre><code class="lang-csharp">var metadata = Metadata.Create()
+    .SetTag(&quot;Version&quot;, &quot;1.0.0&quot;)
+    .SetTag(&quot;Author&quot;, &quot;Zentient Team&quot;)
+    .Build();
+
+var version = metadata.GetValueOrDefault&lt;string&gt;(&quot;Version&quot;);
+</code></pre>
+<p>Documentation</p>
+<ul>
+<li>API reference: <a href="https://ulfbou.github.io/Zentient.Metadata/">https://ulfbou.github.io/Zentient.Metadata/</a></li>
+<li>Specification and design docs: docs/</li>
+<li>CHANGELOG: CHANGELOG.md</li>
+</ul>
+<p>CI / Release</p>
+<ul>
+<li>The repository uses GitHub Actions (.github/workflows/ci-cd.yml) to run restore, build, test, pack, and publish.</li>
+<li>Releases are triggered by tags using the form <code>vMAJOR.MINOR.PATCH</code> and publish packages to NuGet.org.</li>
+</ul>
+<p>Contributing</p>
+<ul>
+<li>See CONTRIBUTING.md for contribution and release guidelines.</li>
+<li>Open issues and PRs on GitHub; all changes should include tests and updates to CHANGELOG.md when applicable.</li>
+</ul>
+<p>License</p>
+<ul>
+<li>MIT — see LICENSE file.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/main/README.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright © 2025 Zentient Framework Team. All rights reserved.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

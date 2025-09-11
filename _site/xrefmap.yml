@@ -1,0 +1,1218 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Zentient.Abstractions.Metadata
+  name: Zentient.Abstractions.Metadata
+  href: api/Zentient.Abstractions.Metadata.html
+  commentId: N:Zentient.Abstractions.Metadata
+  fullName: Zentient.Abstractions.Metadata
+  nameWithType: Zentient.Abstractions.Metadata
+- uid: Zentient.Abstractions.Metadata.Diagnostics
+  name: Zentient.Abstractions.Metadata.Diagnostics
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.html
+  commentId: N:Zentient.Abstractions.Metadata.Diagnostics
+  fullName: Zentient.Abstractions.Metadata.Diagnostics
+  nameWithType: Zentient.Abstractions.Metadata.Diagnostics
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition
+  name: IDiagnosticCheckDefinition
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html
+  commentId: T:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition
+  nameWithType: IDiagnosticCheckDefinition
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DiagnosticsCategory
+  name: DiagnosticsCategory
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html#Zentient_Abstractions_Metadata_Diagnostics_IDiagnosticCheckDefinition_DiagnosticsCategory
+  commentId: P:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DiagnosticsCategory
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DiagnosticsCategory
+  nameWithType: IDiagnosticCheckDefinition.DiagnosticsCategory
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DiagnosticsCategory*
+  name: DiagnosticsCategory
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html#Zentient_Abstractions_Metadata_Diagnostics_IDiagnosticCheckDefinition_DiagnosticsCategory_
+  commentId: Overload:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DiagnosticsCategory
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DiagnosticsCategory
+  nameWithType: IDiagnosticCheckDefinition.DiagnosticsCategory
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DisplayName
+  name: DisplayName
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html#Zentient_Abstractions_Metadata_Diagnostics_IDiagnosticCheckDefinition_DisplayName
+  commentId: P:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DisplayName
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DisplayName
+  nameWithType: IDiagnosticCheckDefinition.DisplayName
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DisplayName*
+  name: DisplayName
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html#Zentient_Abstractions_Metadata_Diagnostics_IDiagnosticCheckDefinition_DisplayName_
+  commentId: Overload:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DisplayName
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.DisplayName
+  nameWithType: IDiagnosticCheckDefinition.DisplayName
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.TargetComponentType
+  name: TargetComponentType
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html#Zentient_Abstractions_Metadata_Diagnostics_IDiagnosticCheckDefinition_TargetComponentType
+  commentId: P:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.TargetComponentType
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.TargetComponentType
+  nameWithType: IDiagnosticCheckDefinition.TargetComponentType
+- uid: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.TargetComponentType*
+  name: TargetComponentType
+  href: api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html#Zentient_Abstractions_Metadata_Diagnostics_IDiagnosticCheckDefinition_TargetComponentType_
+  commentId: Overload:Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.TargetComponentType
+  fullName: Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.TargetComponentType
+  nameWithType: IDiagnosticCheckDefinition.TargetComponentType
+- uid: Zentient.Abstractions.Metadata.IMetadataDefinition
+  name: IMetadataDefinition
+  href: api/Zentient.Abstractions.Metadata.IMetadataDefinition.html
+  commentId: T:Zentient.Abstractions.Metadata.IMetadataDefinition
+  fullName: Zentient.Abstractions.Metadata.IMetadataDefinition
+  nameWithType: IMetadataDefinition
+- uid: Zentient.Abstractions.Metadata.IMetadataScanner
+  name: IMetadataScanner
+  href: api/Zentient.Abstractions.Metadata.IMetadataScanner.html
+  commentId: T:Zentient.Abstractions.Metadata.IMetadataScanner
+  fullName: Zentient.Abstractions.Metadata.IMetadataScanner
+  nameWithType: IMetadataScanner
+- uid: Zentient.Abstractions.Metadata.IMetadataScanner.Scan(System.Reflection.MemberInfo)
+  name: Scan(MemberInfo)
+  href: api/Zentient.Abstractions.Metadata.IMetadataScanner.html#Zentient_Abstractions_Metadata_IMetadataScanner_Scan_System_Reflection_MemberInfo_
+  commentId: M:Zentient.Abstractions.Metadata.IMetadataScanner.Scan(System.Reflection.MemberInfo)
+  fullName: Zentient.Abstractions.Metadata.IMetadataScanner.Scan(System.Reflection.MemberInfo)
+  nameWithType: IMetadataScanner.Scan(MemberInfo)
+- uid: Zentient.Abstractions.Metadata.IMetadataScanner.Scan(System.Type)
+  name: Scan(Type)
+  href: api/Zentient.Abstractions.Metadata.IMetadataScanner.html#Zentient_Abstractions_Metadata_IMetadataScanner_Scan_System_Type_
+  commentId: M:Zentient.Abstractions.Metadata.IMetadataScanner.Scan(System.Type)
+  fullName: Zentient.Abstractions.Metadata.IMetadataScanner.Scan(System.Type)
+  nameWithType: IMetadataScanner.Scan(Type)
+- uid: Zentient.Abstractions.Metadata.IMetadataScanner.Scan*
+  name: Scan
+  href: api/Zentient.Abstractions.Metadata.IMetadataScanner.html#Zentient_Abstractions_Metadata_IMetadataScanner_Scan_
+  commentId: Overload:Zentient.Abstractions.Metadata.IMetadataScanner.Scan
+  fullName: Zentient.Abstractions.Metadata.IMetadataScanner.Scan
+  nameWithType: IMetadataScanner.Scan
+- uid: Zentient.Abstractions.Metadata.IMetadataScanner.ScanAll(System.Reflection.Assembly)
+  name: ScanAll(Assembly)
+  href: api/Zentient.Abstractions.Metadata.IMetadataScanner.html#Zentient_Abstractions_Metadata_IMetadataScanner_ScanAll_System_Reflection_Assembly_
+  commentId: M:Zentient.Abstractions.Metadata.IMetadataScanner.ScanAll(System.Reflection.Assembly)
+  fullName: Zentient.Abstractions.Metadata.IMetadataScanner.ScanAll(System.Reflection.Assembly)
+  nameWithType: IMetadataScanner.ScanAll(Assembly)
+- uid: Zentient.Abstractions.Metadata.IMetadataScanner.ScanAll*
+  name: ScanAll
+  href: api/Zentient.Abstractions.Metadata.IMetadataScanner.html#Zentient_Abstractions_Metadata_IMetadataScanner_ScanAll_
+  commentId: Overload:Zentient.Abstractions.Metadata.IMetadataScanner.ScanAll
+  fullName: Zentient.Abstractions.Metadata.IMetadataScanner.ScanAll
+  nameWithType: IMetadataScanner.ScanAll
+- uid: Zentient.Abstractions.Metadata.IMetadataTag
+  name: IMetadataTag
+  href: api/Zentient.Abstractions.Metadata.IMetadataTag.html
+  commentId: T:Zentient.Abstractions.Metadata.IMetadataTag
+  fullName: Zentient.Abstractions.Metadata.IMetadataTag
+  nameWithType: IMetadataTag
+- uid: Zentient.Abstractions.Metadata.IMetadataTag.Key
+  name: Key
+  href: api/Zentient.Abstractions.Metadata.IMetadataTag.html#Zentient_Abstractions_Metadata_IMetadataTag_Key
+  commentId: P:Zentient.Abstractions.Metadata.IMetadataTag.Key
+  fullName: Zentient.Abstractions.Metadata.IMetadataTag.Key
+  nameWithType: IMetadataTag.Key
+- uid: Zentient.Abstractions.Metadata.IMetadataTag.Key*
+  name: Key
+  href: api/Zentient.Abstractions.Metadata.IMetadataTag.html#Zentient_Abstractions_Metadata_IMetadataTag_Key_
+  commentId: Overload:Zentient.Abstractions.Metadata.IMetadataTag.Key
+  fullName: Zentient.Abstractions.Metadata.IMetadataTag.Key
+  nameWithType: IMetadataTag.Key
+- uid: Zentient.Abstractions.Metadata.IMetadataTag.Value
+  name: Value
+  href: api/Zentient.Abstractions.Metadata.IMetadataTag.html#Zentient_Abstractions_Metadata_IMetadataTag_Value
+  commentId: P:Zentient.Abstractions.Metadata.IMetadataTag.Value
+  fullName: Zentient.Abstractions.Metadata.IMetadataTag.Value
+  nameWithType: IMetadataTag.Value
+- uid: Zentient.Abstractions.Metadata.IMetadataTag.Value*
+  name: Value
+  href: api/Zentient.Abstractions.Metadata.IMetadataTag.html#Zentient_Abstractions_Metadata_IMetadataTag_Value_
+  commentId: Overload:Zentient.Abstractions.Metadata.IMetadataTag.Value
+  fullName: Zentient.Abstractions.Metadata.IMetadataTag.Value
+  nameWithType: IMetadataTag.Value
+- uid: Zentient.Abstractions.Metadata.IPresetKey
+  name: IPresetKey
+  href: api/Zentient.Abstractions.Metadata.IPresetKey.html
+  commentId: T:Zentient.Abstractions.Metadata.IPresetKey
+  fullName: Zentient.Abstractions.Metadata.IPresetKey
+  nameWithType: IPresetKey
+- uid: Zentient.Abstractions.Metadata.IPresetKey.Name
+  name: Name
+  href: api/Zentient.Abstractions.Metadata.IPresetKey.html#Zentient_Abstractions_Metadata_IPresetKey_Name
+  commentId: P:Zentient.Abstractions.Metadata.IPresetKey.Name
+  fullName: Zentient.Abstractions.Metadata.IPresetKey.Name
+  nameWithType: IPresetKey.Name
+- uid: Zentient.Abstractions.Metadata.IPresetKey.Name*
+  name: Name
+  href: api/Zentient.Abstractions.Metadata.IPresetKey.html#Zentient_Abstractions_Metadata_IPresetKey_Name_
+  commentId: Overload:Zentient.Abstractions.Metadata.IPresetKey.Name
+  fullName: Zentient.Abstractions.Metadata.IPresetKey.Name
+  nameWithType: IPresetKey.Name
+- uid: Zentient.Metadata
+  name: Zentient.Metadata
+  href: api/Zentient.Metadata.html
+  commentId: N:Zentient.Metadata
+  fullName: Zentient.Metadata
+  nameWithType: Zentient.Metadata
+- uid: Zentient.Metadata.Analyzers
+  name: Zentient.Metadata.Analyzers
+  href: api/Zentient.Metadata.Analyzers.html
+  commentId: N:Zentient.Metadata.Analyzers
+  fullName: Zentient.Metadata.Analyzers
+  nameWithType: Zentient.Metadata.Analyzers
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer
+  name: DuplicateMetadataTagAnalyzer
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html
+  commentId: T:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer
+  nameWithType: DuplicateMetadataTagAnalyzer
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.#ctor
+  name: DuplicateMetadataTagAnalyzer()
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer__ctor
+  commentId: M:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.#ctor
+  name.vb: New()
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.DuplicateMetadataTagAnalyzer()
+  fullName.vb: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.New()
+  nameWithType: DuplicateMetadataTagAnalyzer.DuplicateMetadataTagAnalyzer()
+  nameWithType.vb: DuplicateMetadataTagAnalyzer.New()
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.#ctor*
+  name: DuplicateMetadataTagAnalyzer
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer__ctor_
+  commentId: Overload:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.DuplicateMetadataTagAnalyzer
+  fullName.vb: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.New
+  nameWithType: DuplicateMetadataTagAnalyzer.DuplicateMetadataTagAnalyzer
+  nameWithType.vb: DuplicateMetadataTagAnalyzer.New
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.DiagnosticId
+  name: DiagnosticId
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer_DiagnosticId
+  commentId: F:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.DiagnosticId
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.DiagnosticId
+  nameWithType: DuplicateMetadataTagAnalyzer.DiagnosticId
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  name: Initialize(AnalysisContext)
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  commentId: M:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  nameWithType: DuplicateMetadataTagAnalyzer.Initialize(AnalysisContext)
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.Initialize*
+  name: Initialize
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer_Initialize_
+  commentId: Overload:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.Initialize
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.Initialize
+  nameWithType: DuplicateMetadataTagAnalyzer.Initialize
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer_SupportedDiagnostics
+  commentId: P:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+  nameWithType: DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.SupportedDiagnostics*
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html#Zentient_Metadata_Analyzers_DuplicateMetadataTagAnalyzer_SupportedDiagnostics_
+  commentId: Overload:Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+  nameWithType: DuplicateMetadataTagAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer
+  name: InvalidAttributeTargetAnalyzer
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html
+  commentId: T:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer
+  nameWithType: InvalidAttributeTargetAnalyzer
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.#ctor
+  name: InvalidAttributeTargetAnalyzer()
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer__ctor
+  commentId: M:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.#ctor
+  name.vb: New()
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.InvalidAttributeTargetAnalyzer()
+  fullName.vb: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.New()
+  nameWithType: InvalidAttributeTargetAnalyzer.InvalidAttributeTargetAnalyzer()
+  nameWithType.vb: InvalidAttributeTargetAnalyzer.New()
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.#ctor*
+  name: InvalidAttributeTargetAnalyzer
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer__ctor_
+  commentId: Overload:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.InvalidAttributeTargetAnalyzer
+  fullName.vb: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.New
+  nameWithType: InvalidAttributeTargetAnalyzer.InvalidAttributeTargetAnalyzer
+  nameWithType.vb: InvalidAttributeTargetAnalyzer.New
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.DiagnosticId
+  name: DiagnosticId
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer_DiagnosticId
+  commentId: F:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.DiagnosticId
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.DiagnosticId
+  nameWithType: InvalidAttributeTargetAnalyzer.DiagnosticId
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  name: Initialize(AnalysisContext)
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  commentId: M:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  nameWithType: InvalidAttributeTargetAnalyzer.Initialize(AnalysisContext)
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.Initialize*
+  name: Initialize
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer_Initialize_
+  commentId: Overload:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.Initialize
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.Initialize
+  nameWithType: InvalidAttributeTargetAnalyzer.Initialize
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer_SupportedDiagnostics
+  commentId: P:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+  nameWithType: InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.SupportedDiagnostics*
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html#Zentient_Metadata_Analyzers_InvalidAttributeTargetAnalyzer_SupportedDiagnostics_
+  commentId: Overload:Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+  nameWithType: InvalidAttributeTargetAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer
+  name: MissingDocumentationAnalyzer
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html
+  commentId: T:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer
+  nameWithType: MissingDocumentationAnalyzer
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.#ctor
+  name: MissingDocumentationAnalyzer()
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer__ctor
+  commentId: M:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.#ctor
+  name.vb: New()
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.MissingDocumentationAnalyzer()
+  fullName.vb: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.New()
+  nameWithType: MissingDocumentationAnalyzer.MissingDocumentationAnalyzer()
+  nameWithType.vb: MissingDocumentationAnalyzer.New()
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.#ctor*
+  name: MissingDocumentationAnalyzer
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer__ctor_
+  commentId: Overload:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.MissingDocumentationAnalyzer
+  fullName.vb: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.New
+  nameWithType: MissingDocumentationAnalyzer.MissingDocumentationAnalyzer
+  nameWithType.vb: MissingDocumentationAnalyzer.New
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.DiagnosticId
+  name: DiagnosticId
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer_DiagnosticId
+  commentId: F:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.DiagnosticId
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.DiagnosticId
+  nameWithType: MissingDocumentationAnalyzer.DiagnosticId
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  name: Initialize(AnalysisContext)
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  commentId: M:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  nameWithType: MissingDocumentationAnalyzer.Initialize(AnalysisContext)
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.Initialize*
+  name: Initialize
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer_Initialize_
+  commentId: Overload:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.Initialize
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.Initialize
+  nameWithType: MissingDocumentationAnalyzer.Initialize
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.SupportedDiagnostics
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer_SupportedDiagnostics
+  commentId: P:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.SupportedDiagnostics
+  nameWithType: MissingDocumentationAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.SupportedDiagnostics*
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html#Zentient_Metadata_Analyzers_MissingDocumentationAnalyzer_SupportedDiagnostics_
+  commentId: Overload:Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.SupportedDiagnostics
+  nameWithType: MissingDocumentationAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer
+  name: MissingInterfaceAnalyzer
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html
+  commentId: T:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer
+  nameWithType: MissingInterfaceAnalyzer
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.#ctor
+  name: MissingInterfaceAnalyzer()
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer__ctor
+  commentId: M:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.#ctor
+  name.vb: New()
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.MissingInterfaceAnalyzer()
+  fullName.vb: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.New()
+  nameWithType: MissingInterfaceAnalyzer.MissingInterfaceAnalyzer()
+  nameWithType.vb: MissingInterfaceAnalyzer.New()
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.#ctor*
+  name: MissingInterfaceAnalyzer
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer__ctor_
+  commentId: Overload:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.MissingInterfaceAnalyzer
+  fullName.vb: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.New
+  nameWithType: MissingInterfaceAnalyzer.MissingInterfaceAnalyzer
+  nameWithType.vb: MissingInterfaceAnalyzer.New
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.DiagnosticId
+  name: DiagnosticId
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer_DiagnosticId
+  commentId: F:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.DiagnosticId
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.DiagnosticId
+  nameWithType: MissingInterfaceAnalyzer.DiagnosticId
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  name: Initialize(AnalysisContext)
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  commentId: M:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  nameWithType: MissingInterfaceAnalyzer.Initialize(AnalysisContext)
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.Initialize*
+  name: Initialize
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer_Initialize_
+  commentId: Overload:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.Initialize
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.Initialize
+  nameWithType: MissingInterfaceAnalyzer.Initialize
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.SupportedDiagnostics
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer_SupportedDiagnostics
+  commentId: P:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.SupportedDiagnostics
+  nameWithType: MissingInterfaceAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.SupportedDiagnostics*
+  name: SupportedDiagnostics
+  href: api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html#Zentient_Metadata_Analyzers_MissingInterfaceAnalyzer_SupportedDiagnostics_
+  commentId: Overload:Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.SupportedDiagnostics
+  fullName: Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.SupportedDiagnostics
+  nameWithType: MissingInterfaceAnalyzer.SupportedDiagnostics
+- uid: Zentient.Metadata.Attributes
+  name: Zentient.Metadata.Attributes
+  href: api/Zentient.Metadata.Attributes.html
+  commentId: N:Zentient.Metadata.Attributes
+  fullName: Zentient.Metadata.Attributes
+  nameWithType: Zentient.Metadata.Attributes
+- uid: Zentient.Metadata.Attributes.AttributeHandlerContext
+  name: AttributeHandlerContext
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerContext.html
+  commentId: T:Zentient.Metadata.Attributes.AttributeHandlerContext
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerContext
+  nameWithType: AttributeHandlerContext
+- uid: Zentient.Metadata.Attributes.AttributeHandlerContext.#ctor(Zentient.Abstractions.Metadata.Builders.IMetadataBuilder)
+  name: AttributeHandlerContext(IMetadataBuilder)
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerContext.html#Zentient_Metadata_Attributes_AttributeHandlerContext__ctor_Zentient_Abstractions_Metadata_Builders_IMetadataBuilder_
+  commentId: M:Zentient.Metadata.Attributes.AttributeHandlerContext.#ctor(Zentient.Abstractions.Metadata.Builders.IMetadataBuilder)
+  name.vb: New(IMetadataBuilder)
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerContext.AttributeHandlerContext(Zentient.Abstractions.Metadata.Builders.IMetadataBuilder)
+  fullName.vb: Zentient.Metadata.Attributes.AttributeHandlerContext.New(Zentient.Abstractions.Metadata.Builders.IMetadataBuilder)
+  nameWithType: AttributeHandlerContext.AttributeHandlerContext(IMetadataBuilder)
+  nameWithType.vb: AttributeHandlerContext.New(IMetadataBuilder)
+- uid: Zentient.Metadata.Attributes.AttributeHandlerContext.#ctor*
+  name: AttributeHandlerContext
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerContext.html#Zentient_Metadata_Attributes_AttributeHandlerContext__ctor_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeHandlerContext.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerContext.AttributeHandlerContext
+  fullName.vb: Zentient.Metadata.Attributes.AttributeHandlerContext.New
+  nameWithType: AttributeHandlerContext.AttributeHandlerContext
+  nameWithType.vb: AttributeHandlerContext.New
+- uid: Zentient.Metadata.Attributes.AttributeHandlerContext.Builder
+  name: Builder
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerContext.html#Zentient_Metadata_Attributes_AttributeHandlerContext_Builder
+  commentId: P:Zentient.Metadata.Attributes.AttributeHandlerContext.Builder
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerContext.Builder
+  nameWithType: AttributeHandlerContext.Builder
+- uid: Zentient.Metadata.Attributes.AttributeHandlerContext.Builder*
+  name: Builder
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerContext.html#Zentient_Metadata_Attributes_AttributeHandlerContext_Builder_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeHandlerContext.Builder
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerContext.Builder
+  nameWithType: AttributeHandlerContext.Builder
+- uid: Zentient.Metadata.Attributes.AttributeHandlerRegistry
+  name: AttributeHandlerRegistry
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.html
+  commentId: T:Zentient.Metadata.Attributes.AttributeHandlerRegistry
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerRegistry
+  nameWithType: AttributeHandlerRegistry
+- uid: Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register*
+  name: Register
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.html#Zentient_Metadata_Attributes_AttributeHandlerRegistry_Register_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register
+  nameWithType: AttributeHandlerRegistry.Register
+- uid: Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register``1(System.Action{``0,Zentient.Metadata.Attributes.AttributeHandlerContext})
+  name: Register<TAttr>(Action<TAttr, AttributeHandlerContext>)
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.html#Zentient_Metadata_Attributes_AttributeHandlerRegistry_Register__1_System_Action___0_Zentient_Metadata_Attributes_AttributeHandlerContext__
+  commentId: M:Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register``1(System.Action{``0,Zentient.Metadata.Attributes.AttributeHandlerContext})
+  name.vb: Register(Of TAttr)(Action(Of TAttr, AttributeHandlerContext))
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register<TAttr>(System.Action<TAttr, Zentient.Metadata.Attributes.AttributeHandlerContext>)
+  fullName.vb: Zentient.Metadata.Attributes.AttributeHandlerRegistry.Register(Of TAttr)(System.Action(Of TAttr, Zentient.Metadata.Attributes.AttributeHandlerContext))
+  nameWithType: AttributeHandlerRegistry.Register<TAttr>(Action<TAttr, AttributeHandlerContext>)
+  nameWithType.vb: AttributeHandlerRegistry.Register(Of TAttr)(Action(Of TAttr, AttributeHandlerContext))
+- uid: Zentient.Metadata.Attributes.AttributeHandlerRegistry.TryHandle(System.Attribute,Zentient.Metadata.Attributes.AttributeHandlerContext)
+  name: TryHandle(Attribute, AttributeHandlerContext)
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.html#Zentient_Metadata_Attributes_AttributeHandlerRegistry_TryHandle_System_Attribute_Zentient_Metadata_Attributes_AttributeHandlerContext_
+  commentId: M:Zentient.Metadata.Attributes.AttributeHandlerRegistry.TryHandle(System.Attribute,Zentient.Metadata.Attributes.AttributeHandlerContext)
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerRegistry.TryHandle(System.Attribute, Zentient.Metadata.Attributes.AttributeHandlerContext)
+  nameWithType: AttributeHandlerRegistry.TryHandle(Attribute, AttributeHandlerContext)
+- uid: Zentient.Metadata.Attributes.AttributeHandlerRegistry.TryHandle*
+  name: TryHandle
+  href: api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.html#Zentient_Metadata_Attributes_AttributeHandlerRegistry_TryHandle_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeHandlerRegistry.TryHandle
+  fullName: Zentient.Metadata.Attributes.AttributeHandlerRegistry.TryHandle
+  nameWithType: AttributeHandlerRegistry.TryHandle
+- uid: Zentient.Metadata.Attributes.AttributeMetadataConverter
+  name: AttributeMetadataConverter
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataConverter.html
+  commentId: T:Zentient.Metadata.Attributes.AttributeMetadataConverter
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataConverter
+  nameWithType: AttributeMetadataConverter
+- uid: Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert(System.Collections.Generic.IEnumerable{System.Attribute})
+  name: Convert(IEnumerable<Attribute>)
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataConverter.html#Zentient_Metadata_Attributes_AttributeMetadataConverter_Convert_System_Collections_Generic_IEnumerable_System_Attribute__
+  commentId: M:Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert(System.Collections.Generic.IEnumerable{System.Attribute})
+  name.vb: Convert(IEnumerable(Of Attribute))
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert(System.Collections.Generic.IEnumerable<System.Attribute>)
+  fullName.vb: Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert(System.Collections.Generic.IEnumerable(Of System.Attribute))
+  nameWithType: AttributeMetadataConverter.Convert(IEnumerable<Attribute>)
+  nameWithType.vb: AttributeMetadataConverter.Convert(IEnumerable(Of Attribute))
+- uid: Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert*
+  name: Convert
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataConverter.html#Zentient_Metadata_Attributes_AttributeMetadataConverter_Convert_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataConverter.Convert
+  nameWithType: AttributeMetadataConverter.Convert
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner
+  name: AttributeMetadataScanner
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html
+  commentId: T:Zentient.Metadata.Attributes.AttributeMetadataScanner
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner
+  nameWithType: AttributeMetadataScanner
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.#ctor
+  name: AttributeMetadataScanner()
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner__ctor
+  commentId: M:Zentient.Metadata.Attributes.AttributeMetadataScanner.#ctor
+  name.vb: New()
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.AttributeMetadataScanner()
+  fullName.vb: Zentient.Metadata.Attributes.AttributeMetadataScanner.New()
+  nameWithType: AttributeMetadataScanner.AttributeMetadataScanner()
+  nameWithType.vb: AttributeMetadataScanner.New()
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.#ctor*
+  name: AttributeMetadataScanner
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner__ctor_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeMetadataScanner.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.AttributeMetadataScanner
+  fullName.vb: Zentient.Metadata.Attributes.AttributeMetadataScanner.New
+  nameWithType: AttributeMetadataScanner.AttributeMetadataScanner
+  nameWithType.vb: AttributeMetadataScanner.New
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan(System.Reflection.MemberInfo)
+  name: Scan(MemberInfo)
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner_Scan_System_Reflection_MemberInfo_
+  commentId: M:Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan(System.Reflection.MemberInfo)
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan(System.Reflection.MemberInfo)
+  nameWithType: AttributeMetadataScanner.Scan(MemberInfo)
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan(System.Type)
+  name: Scan(Type)
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner_Scan_System_Type_
+  commentId: M:Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan(System.Type)
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan(System.Type)
+  nameWithType: AttributeMetadataScanner.Scan(Type)
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan*
+  name: Scan
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner_Scan_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.Scan
+  nameWithType: AttributeMetadataScanner.Scan
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.ScanAll(System.Reflection.Assembly)
+  name: ScanAll(Assembly)
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner_ScanAll_System_Reflection_Assembly_
+  commentId: M:Zentient.Metadata.Attributes.AttributeMetadataScanner.ScanAll(System.Reflection.Assembly)
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.ScanAll(System.Reflection.Assembly)
+  nameWithType: AttributeMetadataScanner.ScanAll(Assembly)
+- uid: Zentient.Metadata.Attributes.AttributeMetadataScanner.ScanAll*
+  name: ScanAll
+  href: api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html#Zentient_Metadata_Attributes_AttributeMetadataScanner_ScanAll_
+  commentId: Overload:Zentient.Metadata.Attributes.AttributeMetadataScanner.ScanAll
+  fullName: Zentient.Metadata.Attributes.AttributeMetadataScanner.ScanAll
+  nameWithType: AttributeMetadataScanner.ScanAll
+- uid: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute
+  name: BehaviorDefinitionAttribute
+  href: api/Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.html
+  commentId: T:Zentient.Metadata.Attributes.BehaviorDefinitionAttribute
+  fullName: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute
+  nameWithType: BehaviorDefinitionAttribute
+- uid: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.#ctor(System.Int32,System.String)
+  name: BehaviorDefinitionAttribute(int, string?)
+  href: api/Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.html#Zentient_Metadata_Attributes_BehaviorDefinitionAttribute__ctor_System_Int32_System_String_
+  commentId: M:Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.#ctor(System.Int32,System.String)
+  name.vb: New(Integer, String)
+  fullName: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.BehaviorDefinitionAttribute(int, string?)
+  fullName.vb: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.New(Integer, String)
+  nameWithType: BehaviorDefinitionAttribute.BehaviorDefinitionAttribute(int, string?)
+  nameWithType.vb: BehaviorDefinitionAttribute.New(Integer, String)
+- uid: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.#ctor*
+  name: BehaviorDefinitionAttribute
+  href: api/Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.html#Zentient_Metadata_Attributes_BehaviorDefinitionAttribute__ctor_
+  commentId: Overload:Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.BehaviorDefinitionAttribute
+  fullName.vb: Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.New
+  nameWithType: BehaviorDefinitionAttribute.BehaviorDefinitionAttribute
+  nameWithType.vb: BehaviorDefinitionAttribute.New
+- uid: Zentient.Metadata.Attributes.CategoryDefinitionAttribute
+  name: CategoryDefinitionAttribute
+  href: api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.html
+  commentId: T:Zentient.Metadata.Attributes.CategoryDefinitionAttribute
+  fullName: Zentient.Metadata.Attributes.CategoryDefinitionAttribute
+  nameWithType: CategoryDefinitionAttribute
+- uid: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.#ctor(System.String,System.Int32,System.String)
+  name: CategoryDefinitionAttribute(string?, int, string?)
+  href: api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.html#Zentient_Metadata_Attributes_CategoryDefinitionAttribute__ctor_System_String_System_Int32_System_String_
+  commentId: M:Zentient.Metadata.Attributes.CategoryDefinitionAttribute.#ctor(System.String,System.Int32,System.String)
+  name.vb: New(String, Integer, String)
+  fullName: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.CategoryDefinitionAttribute(string?, int, string?)
+  fullName.vb: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.New(String, Integer, String)
+  nameWithType: CategoryDefinitionAttribute.CategoryDefinitionAttribute(string?, int, string?)
+  nameWithType.vb: CategoryDefinitionAttribute.New(String, Integer, String)
+- uid: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.#ctor*
+  name: CategoryDefinitionAttribute
+  href: api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.html#Zentient_Metadata_Attributes_CategoryDefinitionAttribute__ctor_
+  commentId: Overload:Zentient.Metadata.Attributes.CategoryDefinitionAttribute.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.CategoryDefinitionAttribute
+  fullName.vb: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.New
+  nameWithType: CategoryDefinitionAttribute.CategoryDefinitionAttribute
+  nameWithType.vb: CategoryDefinitionAttribute.New
+- uid: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.Name
+  name: Name
+  href: api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.html#Zentient_Metadata_Attributes_CategoryDefinitionAttribute_Name
+  commentId: P:Zentient.Metadata.Attributes.CategoryDefinitionAttribute.Name
+  fullName: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.Name
+  nameWithType: CategoryDefinitionAttribute.Name
+- uid: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.Name*
+  name: Name
+  href: api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.html#Zentient_Metadata_Attributes_CategoryDefinitionAttribute_Name_
+  commentId: Overload:Zentient.Metadata.Attributes.CategoryDefinitionAttribute.Name
+  fullName: Zentient.Metadata.Attributes.CategoryDefinitionAttribute.Name
+  nameWithType: CategoryDefinitionAttribute.Name
+- uid: Zentient.Metadata.Attributes.IAttributeMetadataScanner
+  name: IAttributeMetadataScanner
+  href: api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html
+  commentId: T:Zentient.Metadata.Attributes.IAttributeMetadataScanner
+  fullName: Zentient.Metadata.Attributes.IAttributeMetadataScanner
+  nameWithType: IAttributeMetadataScanner
+- uid: Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan(System.Reflection.MemberInfo)
+  name: Scan(MemberInfo)
+  href: api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html#Zentient_Metadata_Attributes_IAttributeMetadataScanner_Scan_System_Reflection_MemberInfo_
+  commentId: M:Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan(System.Reflection.MemberInfo)
+  fullName: Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan(System.Reflection.MemberInfo)
+  nameWithType: IAttributeMetadataScanner.Scan(MemberInfo)
+- uid: Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan(System.Type)
+  name: Scan(Type)
+  href: api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html#Zentient_Metadata_Attributes_IAttributeMetadataScanner_Scan_System_Type_
+  commentId: M:Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan(System.Type)
+  fullName: Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan(System.Type)
+  nameWithType: IAttributeMetadataScanner.Scan(Type)
+- uid: Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan*
+  name: Scan
+  href: api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html#Zentient_Metadata_Attributes_IAttributeMetadataScanner_Scan_
+  commentId: Overload:Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan
+  fullName: Zentient.Metadata.Attributes.IAttributeMetadataScanner.Scan
+  nameWithType: IAttributeMetadataScanner.Scan
+- uid: Zentient.Metadata.Attributes.IAttributeMetadataScanner.ScanAll(System.Reflection.Assembly)
+  name: ScanAll(Assembly)
+  href: api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html#Zentient_Metadata_Attributes_IAttributeMetadataScanner_ScanAll_System_Reflection_Assembly_
+  commentId: M:Zentient.Metadata.Attributes.IAttributeMetadataScanner.ScanAll(System.Reflection.Assembly)
+  fullName: Zentient.Metadata.Attributes.IAttributeMetadataScanner.ScanAll(System.Reflection.Assembly)
+  nameWithType: IAttributeMetadataScanner.ScanAll(Assembly)
+- uid: Zentient.Metadata.Attributes.IAttributeMetadataScanner.ScanAll*
+  name: ScanAll
+  href: api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html#Zentient_Metadata_Attributes_IAttributeMetadataScanner_ScanAll_
+  commentId: Overload:Zentient.Metadata.Attributes.IAttributeMetadataScanner.ScanAll
+  fullName: Zentient.Metadata.Attributes.IAttributeMetadataScanner.ScanAll
+  nameWithType: IAttributeMetadataScanner.ScanAll
+- uid: Zentient.Metadata.Attributes.MetadataAttribute
+  name: MetadataAttribute
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html
+  commentId: T:Zentient.Metadata.Attributes.MetadataAttribute
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute
+  nameWithType: MetadataAttribute
+- uid: Zentient.Metadata.Attributes.MetadataAttribute.#ctor(System.Int32,System.String)
+  name: MetadataAttribute(int, string?)
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html#Zentient_Metadata_Attributes_MetadataAttribute__ctor_System_Int32_System_String_
+  commentId: M:Zentient.Metadata.Attributes.MetadataAttribute.#ctor(System.Int32,System.String)
+  name.vb: New(Integer, String)
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute.MetadataAttribute(int, string?)
+  fullName.vb: Zentient.Metadata.Attributes.MetadataAttribute.New(Integer, String)
+  nameWithType: MetadataAttribute.MetadataAttribute(int, string?)
+  nameWithType.vb: MetadataAttribute.New(Integer, String)
+- uid: Zentient.Metadata.Attributes.MetadataAttribute.#ctor*
+  name: MetadataAttribute
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html#Zentient_Metadata_Attributes_MetadataAttribute__ctor_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataAttribute.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute.MetadataAttribute
+  fullName.vb: Zentient.Metadata.Attributes.MetadataAttribute.New
+  nameWithType: MetadataAttribute.MetadataAttribute
+  nameWithType.vb: MetadataAttribute.New
+- uid: Zentient.Metadata.Attributes.MetadataAttribute.Order
+  name: Order
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html#Zentient_Metadata_Attributes_MetadataAttribute_Order
+  commentId: P:Zentient.Metadata.Attributes.MetadataAttribute.Order
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute.Order
+  nameWithType: MetadataAttribute.Order
+- uid: Zentient.Metadata.Attributes.MetadataAttribute.Order*
+  name: Order
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html#Zentient_Metadata_Attributes_MetadataAttribute_Order_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataAttribute.Order
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute.Order
+  nameWithType: MetadataAttribute.Order
+- uid: Zentient.Metadata.Attributes.MetadataAttribute.Preset
+  name: Preset
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html#Zentient_Metadata_Attributes_MetadataAttribute_Preset
+  commentId: P:Zentient.Metadata.Attributes.MetadataAttribute.Preset
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute.Preset
+  nameWithType: MetadataAttribute.Preset
+- uid: Zentient.Metadata.Attributes.MetadataAttribute.Preset*
+  name: Preset
+  href: api/Zentient.Metadata.Attributes.MetadataAttribute.html#Zentient_Metadata_Attributes_MetadataAttribute_Preset_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataAttribute.Preset
+  fullName: Zentient.Metadata.Attributes.MetadataAttribute.Preset
+  nameWithType: MetadataAttribute.Preset
+- uid: Zentient.Metadata.Attributes.MetadataAttributeReader
+  name: MetadataAttributeReader
+  href: api/Zentient.Metadata.Attributes.MetadataAttributeReader.html
+  commentId: T:Zentient.Metadata.Attributes.MetadataAttributeReader
+  fullName: Zentient.Metadata.Attributes.MetadataAttributeReader
+  nameWithType: MetadataAttributeReader
+- uid: Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata(System.Reflection.MemberInfo)
+  name: GetMetadata(MemberInfo)
+  href: api/Zentient.Metadata.Attributes.MetadataAttributeReader.html#Zentient_Metadata_Attributes_MetadataAttributeReader_GetMetadata_System_Reflection_MemberInfo_
+  commentId: M:Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata(System.Reflection.MemberInfo)
+  fullName: Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata(System.Reflection.MemberInfo)
+  nameWithType: MetadataAttributeReader.GetMetadata(MemberInfo)
+- uid: Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata(System.Type)
+  name: GetMetadata(Type)
+  href: api/Zentient.Metadata.Attributes.MetadataAttributeReader.html#Zentient_Metadata_Attributes_MetadataAttributeReader_GetMetadata_System_Type_
+  commentId: M:Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata(System.Type)
+  fullName: Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata(System.Type)
+  nameWithType: MetadataAttributeReader.GetMetadata(Type)
+- uid: Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata*
+  name: GetMetadata
+  href: api/Zentient.Metadata.Attributes.MetadataAttributeReader.html#Zentient_Metadata_Attributes_MetadataAttributeReader_GetMetadata_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata
+  fullName: Zentient.Metadata.Attributes.MetadataAttributeReader.GetMetadata
+  nameWithType: MetadataAttributeReader.GetMetadata
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute
+  name: MetadataTagAttribute
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html
+  commentId: T:Zentient.Metadata.Attributes.MetadataTagAttribute
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute
+  nameWithType: MetadataTagAttribute
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.#ctor(System.Type,System.Object,System.Int32,System.String)
+  name: MetadataTagAttribute(Type, object?, int, string?)
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute__ctor_System_Type_System_Object_System_Int32_System_String_
+  commentId: M:Zentient.Metadata.Attributes.MetadataTagAttribute.#ctor(System.Type,System.Object,System.Int32,System.String)
+  name.vb: New(Type, Object, Integer, String)
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.MetadataTagAttribute(System.Type, object?, int, string?)
+  fullName.vb: Zentient.Metadata.Attributes.MetadataTagAttribute.New(System.Type, Object, Integer, String)
+  nameWithType: MetadataTagAttribute.MetadataTagAttribute(Type, object?, int, string?)
+  nameWithType.vb: MetadataTagAttribute.New(Type, Object, Integer, String)
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.#ctor*
+  name: MetadataTagAttribute
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute__ctor_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataTagAttribute.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.MetadataTagAttribute
+  fullName.vb: Zentient.Metadata.Attributes.MetadataTagAttribute.New
+  nameWithType: MetadataTagAttribute.MetadataTagAttribute
+  nameWithType.vb: MetadataTagAttribute.New
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.Key
+  name: Key
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute_Key
+  commentId: P:Zentient.Metadata.Attributes.MetadataTagAttribute.Key
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.Key
+  nameWithType: MetadataTagAttribute.Key
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.Key*
+  name: Key
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute_Key_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataTagAttribute.Key
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.Key
+  nameWithType: MetadataTagAttribute.Key
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.TagType
+  name: TagType
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute_TagType
+  commentId: P:Zentient.Metadata.Attributes.MetadataTagAttribute.TagType
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.TagType
+  nameWithType: MetadataTagAttribute.TagType
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.TagType*
+  name: TagType
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute_TagType_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataTagAttribute.TagType
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.TagType
+  nameWithType: MetadataTagAttribute.TagType
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.TagValue
+  name: TagValue
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute_TagValue
+  commentId: P:Zentient.Metadata.Attributes.MetadataTagAttribute.TagValue
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.TagValue
+  nameWithType: MetadataTagAttribute.TagValue
+- uid: Zentient.Metadata.Attributes.MetadataTagAttribute.TagValue*
+  name: TagValue
+  href: api/Zentient.Metadata.Attributes.MetadataTagAttribute.html#Zentient_Metadata_Attributes_MetadataTagAttribute_TagValue_
+  commentId: Overload:Zentient.Metadata.Attributes.MetadataTagAttribute.TagValue
+  fullName: Zentient.Metadata.Attributes.MetadataTagAttribute.TagValue
+  nameWithType: MetadataTagAttribute.TagValue
+- uid: Zentient.Metadata.Metadata
+  name: Metadata
+  href: api/Zentient.Metadata.Metadata.html
+  commentId: T:Zentient.Metadata.Metadata
+  fullName: Zentient.Metadata.Metadata
+  nameWithType: Metadata
+- uid: Zentient.Metadata.Metadata.Create
+  name: Create()
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_Create
+  commentId: M:Zentient.Metadata.Metadata.Create
+  fullName: Zentient.Metadata.Metadata.Create()
+  nameWithType: Metadata.Create()
+- uid: Zentient.Metadata.Metadata.Create*
+  name: Create
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_Create_
+  commentId: Overload:Zentient.Metadata.Metadata.Create
+  fullName: Zentient.Metadata.Metadata.Create
+  nameWithType: Metadata.Create
+- uid: Zentient.Metadata.Metadata.Empty
+  name: Empty
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_Empty
+  commentId: P:Zentient.Metadata.Metadata.Empty
+  fullName: Zentient.Metadata.Metadata.Empty
+  nameWithType: Metadata.Empty
+- uid: Zentient.Metadata.Metadata.Empty*
+  name: Empty
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_Empty_
+  commentId: Overload:Zentient.Metadata.Metadata.Empty
+  fullName: Zentient.Metadata.Metadata.Empty
+  nameWithType: Metadata.Empty
+- uid: Zentient.Metadata.Metadata.WithBehavior*
+  name: WithBehavior
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_WithBehavior_
+  commentId: Overload:Zentient.Metadata.Metadata.WithBehavior
+  fullName: Zentient.Metadata.Metadata.WithBehavior
+  nameWithType: Metadata.WithBehavior
+- uid: Zentient.Metadata.Metadata.WithBehavior``1
+  name: WithBehavior<TBehavior>()
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_WithBehavior__1
+  commentId: M:Zentient.Metadata.Metadata.WithBehavior``1
+  name.vb: WithBehavior(Of TBehavior)()
+  fullName: Zentient.Metadata.Metadata.WithBehavior<TBehavior>()
+  fullName.vb: Zentient.Metadata.Metadata.WithBehavior(Of TBehavior)()
+  nameWithType: Metadata.WithBehavior<TBehavior>()
+  nameWithType.vb: Metadata.WithBehavior(Of TBehavior)()
+- uid: Zentient.Metadata.Metadata.WithCategory*
+  name: WithCategory
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_WithCategory_
+  commentId: Overload:Zentient.Metadata.Metadata.WithCategory
+  fullName: Zentient.Metadata.Metadata.WithCategory
+  nameWithType: Metadata.WithCategory
+- uid: Zentient.Metadata.Metadata.WithCategory``1
+  name: WithCategory<TCategory>()
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_WithCategory__1
+  commentId: M:Zentient.Metadata.Metadata.WithCategory``1
+  name.vb: WithCategory(Of TCategory)()
+  fullName: Zentient.Metadata.Metadata.WithCategory<TCategory>()
+  fullName.vb: Zentient.Metadata.Metadata.WithCategory(Of TCategory)()
+  nameWithType: Metadata.WithCategory<TCategory>()
+  nameWithType.vb: Metadata.WithCategory(Of TCategory)()
+- uid: Zentient.Metadata.Metadata.WithTag*
+  name: WithTag
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_WithTag_
+  commentId: Overload:Zentient.Metadata.Metadata.WithTag
+  fullName: Zentient.Metadata.Metadata.WithTag
+  nameWithType: Metadata.WithTag
+- uid: Zentient.Metadata.Metadata.WithTag``2(``1)
+  name: WithTag<TTag, TValue>(TValue)
+  href: api/Zentient.Metadata.Metadata.html#Zentient_Metadata_Metadata_WithTag__2___1_
+  commentId: M:Zentient.Metadata.Metadata.WithTag``2(``1)
+  name.vb: WithTag(Of TTag, TValue)(TValue)
+  fullName: Zentient.Metadata.Metadata.WithTag<TTag, TValue>(TValue)
+  fullName.vb: Zentient.Metadata.Metadata.WithTag(Of TTag, TValue)(TValue)
+  nameWithType: Metadata.WithTag<TTag, TValue>(TValue)
+  nameWithType.vb: Metadata.WithTag(Of TTag, TValue)(TValue)
+- uid: Zentient.Metadata.MetadataExtensions
+  name: MetadataExtensions
+  href: api/Zentient.Metadata.MetadataExtensions.html
+  commentId: T:Zentient.Metadata.MetadataExtensions
+  fullName: Zentient.Metadata.MetadataExtensions
+  nameWithType: MetadataExtensions
+- uid: Zentient.Metadata.MetadataExtensions.GetBehavior*
+  name: GetBehavior
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetBehavior_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.GetBehavior
+  fullName: Zentient.Metadata.MetadataExtensions.GetBehavior
+  nameWithType: MetadataExtensions.GetBehavior
+- uid: Zentient.Metadata.MetadataExtensions.GetBehavior``1(Zentient.Abstractions.Metadata.IMetadata)
+  name: GetBehavior<TBehavior>(IMetadata)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetBehavior__1_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataExtensions.GetBehavior``1(Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: GetBehavior(Of TBehavior)(IMetadata)
+  fullName: Zentient.Metadata.MetadataExtensions.GetBehavior<TBehavior>(Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.GetBehavior(Of TBehavior)(Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataExtensions.GetBehavior<TBehavior>(IMetadata)
+  nameWithType.vb: MetadataExtensions.GetBehavior(Of TBehavior)(IMetadata)
+- uid: Zentient.Metadata.MetadataExtensions.GetTagValue*
+  name: GetTagValue
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetTagValue_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.GetTagValue
+  fullName: Zentient.Metadata.MetadataExtensions.GetTagValue
+  nameWithType: MetadataExtensions.GetTagValue
+- uid: Zentient.Metadata.MetadataExtensions.GetTagValue``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0)
+  name: GetTagValue<TValue>(IMetadata, string, TValue)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetTagValue__1_Zentient_Abstractions_Metadata_IMetadata_System_String___0_
+  commentId: M:Zentient.Metadata.MetadataExtensions.GetTagValue``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0)
+  name.vb: GetTagValue(Of TValue)(IMetadata, String, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.GetTagValue<TValue>(Zentient.Abstractions.Metadata.IMetadata, string, TValue)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.GetTagValue(Of TValue)(Zentient.Abstractions.Metadata.IMetadata, String, TValue)
+  nameWithType: MetadataExtensions.GetTagValue<TValue>(IMetadata, string, TValue)
+  nameWithType.vb: MetadataExtensions.GetTagValue(Of TValue)(IMetadata, String, TValue)
+- uid: Zentient.Metadata.MetadataExtensions.GetTagValue``2(Zentient.Abstractions.Metadata.IMetadata,``1)
+  name: GetTagValue<TTag, TValue>(IMetadata, TValue)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetTagValue__2_Zentient_Abstractions_Metadata_IMetadata___1_
+  commentId: M:Zentient.Metadata.MetadataExtensions.GetTagValue``2(Zentient.Abstractions.Metadata.IMetadata,``1)
+  name.vb: GetTagValue(Of TTag, TValue)(IMetadata, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.GetTagValue<TTag, TValue>(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.GetTagValue(Of TTag, TValue)(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  nameWithType: MetadataExtensions.GetTagValue<TTag, TValue>(IMetadata, TValue)
+  nameWithType.vb: MetadataExtensions.GetTagValue(Of TTag, TValue)(IMetadata, TValue)
+- uid: Zentient.Metadata.MetadataExtensions.GetValueOrDefault*
+  name: GetValueOrDefault
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetValueOrDefault_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.GetValueOrDefault
+  fullName: Zentient.Metadata.MetadataExtensions.GetValueOrDefault
+  nameWithType: MetadataExtensions.GetValueOrDefault
+- uid: Zentient.Metadata.MetadataExtensions.GetValueOrDefault``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0)
+  name: GetValueOrDefault<TValue>(IMetadata, string, TValue)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_GetValueOrDefault__1_Zentient_Abstractions_Metadata_IMetadata_System_String___0_
+  commentId: M:Zentient.Metadata.MetadataExtensions.GetValueOrDefault``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0)
+  name.vb: GetValueOrDefault(Of TValue)(IMetadata, String, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.GetValueOrDefault<TValue>(Zentient.Abstractions.Metadata.IMetadata, string, TValue)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.GetValueOrDefault(Of TValue)(Zentient.Abstractions.Metadata.IMetadata, String, TValue)
+  nameWithType: MetadataExtensions.GetValueOrDefault<TValue>(IMetadata, string, TValue)
+  nameWithType.vb: MetadataExtensions.GetValueOrDefault(Of TValue)(IMetadata, String, TValue)
+- uid: Zentient.Metadata.MetadataExtensions.HasBehavior*
+  name: HasBehavior
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_HasBehavior_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.HasBehavior
+  fullName: Zentient.Metadata.MetadataExtensions.HasBehavior
+  nameWithType: MetadataExtensions.HasBehavior
+- uid: Zentient.Metadata.MetadataExtensions.HasBehavior``1(Zentient.Abstractions.Metadata.IMetadata)
+  name: HasBehavior<TBehavior>(IMetadata)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_HasBehavior__1_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataExtensions.HasBehavior``1(Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: HasBehavior(Of TBehavior)(IMetadata)
+  fullName: Zentient.Metadata.MetadataExtensions.HasBehavior<TBehavior>(Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.HasBehavior(Of TBehavior)(Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataExtensions.HasBehavior<TBehavior>(IMetadata)
+  nameWithType.vb: MetadataExtensions.HasBehavior(Of TBehavior)(IMetadata)
+- uid: Zentient.Metadata.MetadataExtensions.HasCategory*
+  name: HasCategory
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_HasCategory_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.HasCategory
+  fullName: Zentient.Metadata.MetadataExtensions.HasCategory
+  nameWithType: MetadataExtensions.HasCategory
+- uid: Zentient.Metadata.MetadataExtensions.HasCategory``1(Zentient.Abstractions.Metadata.IMetadata)
+  name: HasCategory<TCategory>(IMetadata)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_HasCategory__1_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataExtensions.HasCategory``1(Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: HasCategory(Of TCategory)(IMetadata)
+  fullName: Zentient.Metadata.MetadataExtensions.HasCategory<TCategory>(Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.HasCategory(Of TCategory)(Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataExtensions.HasCategory<TCategory>(IMetadata)
+  nameWithType.vb: MetadataExtensions.HasCategory(Of TCategory)(IMetadata)
+- uid: Zentient.Metadata.MetadataExtensions.HasTag*
+  name: HasTag
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_HasTag_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.HasTag
+  fullName: Zentient.Metadata.MetadataExtensions.HasTag
+  nameWithType: MetadataExtensions.HasTag
+- uid: Zentient.Metadata.MetadataExtensions.HasTag``1(Zentient.Abstractions.Metadata.IMetadata)
+  name: HasTag<TTag>(IMetadata)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_HasTag__1_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataExtensions.HasTag``1(Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: HasTag(Of TTag)(IMetadata)
+  fullName: Zentient.Metadata.MetadataExtensions.HasTag<TTag>(Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.HasTag(Of TTag)(Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataExtensions.HasTag<TTag>(IMetadata)
+  nameWithType.vb: MetadataExtensions.HasTag(Of TTag)(IMetadata)
+- uid: Zentient.Metadata.MetadataExtensions.TryGetTagValue*
+  name: TryGetTagValue
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_TryGetTagValue_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.TryGetTagValue
+  fullName: Zentient.Metadata.MetadataExtensions.TryGetTagValue
+  nameWithType: MetadataExtensions.TryGetTagValue
+- uid: Zentient.Metadata.MetadataExtensions.TryGetTagValue``2(Zentient.Abstractions.Metadata.IMetadata,``1@)
+  name: TryGetTagValue<TTag, TValue>(IMetadata, out TValue)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_TryGetTagValue__2_Zentient_Abstractions_Metadata_IMetadata___1__
+  commentId: M:Zentient.Metadata.MetadataExtensions.TryGetTagValue``2(Zentient.Abstractions.Metadata.IMetadata,``1@)
+  name.vb: TryGetTagValue(Of TTag, TValue)(IMetadata, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.TryGetTagValue<TTag, TValue>(Zentient.Abstractions.Metadata.IMetadata, out TValue)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.TryGetTagValue(Of TTag, TValue)(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  nameWithType: MetadataExtensions.TryGetTagValue<TTag, TValue>(IMetadata, out TValue)
+  nameWithType.vb: MetadataExtensions.TryGetTagValue(Of TTag, TValue)(IMetadata, TValue)
+- uid: Zentient.Metadata.MetadataExtensions.TryGetValue*
+  name: TryGetValue
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_TryGetValue_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.TryGetValue
+  fullName: Zentient.Metadata.MetadataExtensions.TryGetValue
+  nameWithType: MetadataExtensions.TryGetValue
+- uid: Zentient.Metadata.MetadataExtensions.TryGetValue``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0@)
+  name: TryGetValue<TValue>(IMetadata, string, out TValue?)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_TryGetValue__1_Zentient_Abstractions_Metadata_IMetadata_System_String___0__
+  commentId: M:Zentient.Metadata.MetadataExtensions.TryGetValue``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0@)
+  name.vb: TryGetValue(Of TValue)(IMetadata, String, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.TryGetValue<TValue>(Zentient.Abstractions.Metadata.IMetadata, string, out TValue?)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.TryGetValue(Of TValue)(Zentient.Abstractions.Metadata.IMetadata, String, TValue)
+  nameWithType: MetadataExtensions.TryGetValue<TValue>(IMetadata, string, out TValue?)
+  nameWithType.vb: MetadataExtensions.TryGetValue(Of TValue)(IMetadata, String, TValue)
+- uid: Zentient.Metadata.MetadataExtensions.WithBehavior*
+  name: WithBehavior
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithBehavior_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.WithBehavior
+  fullName: Zentient.Metadata.MetadataExtensions.WithBehavior
+  nameWithType: MetadataExtensions.WithBehavior
+- uid: Zentient.Metadata.MetadataExtensions.WithBehavior``1(Zentient.Abstractions.Metadata.IMetadata)
+  name: WithBehavior<TBehavior>(IMetadata)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithBehavior__1_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataExtensions.WithBehavior``1(Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: WithBehavior(Of TBehavior)(IMetadata)
+  fullName: Zentient.Metadata.MetadataExtensions.WithBehavior<TBehavior>(Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.WithBehavior(Of TBehavior)(Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataExtensions.WithBehavior<TBehavior>(IMetadata)
+  nameWithType.vb: MetadataExtensions.WithBehavior(Of TBehavior)(IMetadata)
+- uid: Zentient.Metadata.MetadataExtensions.WithCategory*
+  name: WithCategory
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithCategory_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.WithCategory
+  fullName: Zentient.Metadata.MetadataExtensions.WithCategory
+  nameWithType: MetadataExtensions.WithCategory
+- uid: Zentient.Metadata.MetadataExtensions.WithCategory``1(Zentient.Abstractions.Metadata.IMetadata)
+  name: WithCategory<TCategory>(IMetadata)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithCategory__1_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataExtensions.WithCategory``1(Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: WithCategory(Of TCategory)(IMetadata)
+  fullName: Zentient.Metadata.MetadataExtensions.WithCategory<TCategory>(Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.WithCategory(Of TCategory)(Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataExtensions.WithCategory<TCategory>(IMetadata)
+  nameWithType.vb: MetadataExtensions.WithCategory(Of TCategory)(IMetadata)
+- uid: Zentient.Metadata.MetadataExtensions.WithMergedTags(Zentient.Abstractions.Metadata.IMetadata,Zentient.Abstractions.Metadata.Readers.IMetadataReader)
+  name: WithMergedTags(IMetadata, IMetadataReader)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithMergedTags_Zentient_Abstractions_Metadata_IMetadata_Zentient_Abstractions_Metadata_Readers_IMetadataReader_
+  commentId: M:Zentient.Metadata.MetadataExtensions.WithMergedTags(Zentient.Abstractions.Metadata.IMetadata,Zentient.Abstractions.Metadata.Readers.IMetadataReader)
+  fullName: Zentient.Metadata.MetadataExtensions.WithMergedTags(Zentient.Abstractions.Metadata.IMetadata, Zentient.Abstractions.Metadata.Readers.IMetadataReader)
+  nameWithType: MetadataExtensions.WithMergedTags(IMetadata, IMetadataReader)
+- uid: Zentient.Metadata.MetadataExtensions.WithMergedTags*
+  name: WithMergedTags
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithMergedTags_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.WithMergedTags
+  fullName: Zentient.Metadata.MetadataExtensions.WithMergedTags
+  nameWithType: MetadataExtensions.WithMergedTags
+- uid: Zentient.Metadata.MetadataExtensions.WithTag*
+  name: WithTag
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithTag_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.WithTag
+  fullName: Zentient.Metadata.MetadataExtensions.WithTag
+  nameWithType: MetadataExtensions.WithTag
+- uid: Zentient.Metadata.MetadataExtensions.WithTagIfNotExists*
+  name: WithTagIfNotExists
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithTagIfNotExists_
+  commentId: Overload:Zentient.Metadata.MetadataExtensions.WithTagIfNotExists
+  fullName: Zentient.Metadata.MetadataExtensions.WithTagIfNotExists
+  nameWithType: MetadataExtensions.WithTagIfNotExists
+- uid: Zentient.Metadata.MetadataExtensions.WithTagIfNotExists``2(Zentient.Abstractions.Metadata.IMetadata,``1)
+  name: WithTagIfNotExists<TTag, TValue>(IMetadata, TValue)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithTagIfNotExists__2_Zentient_Abstractions_Metadata_IMetadata___1_
+  commentId: M:Zentient.Metadata.MetadataExtensions.WithTagIfNotExists``2(Zentient.Abstractions.Metadata.IMetadata,``1)
+  name.vb: WithTagIfNotExists(Of TTag, TValue)(IMetadata, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.WithTagIfNotExists<TTag, TValue>(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.WithTagIfNotExists(Of TTag, TValue)(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  nameWithType: MetadataExtensions.WithTagIfNotExists<TTag, TValue>(IMetadata, TValue)
+  nameWithType.vb: MetadataExtensions.WithTagIfNotExists(Of TTag, TValue)(IMetadata, TValue)
+- uid: Zentient.Metadata.MetadataExtensions.WithTag``2(Zentient.Abstractions.Metadata.IMetadata,``1)
+  name: WithTag<TTag, TValue>(IMetadata, TValue)
+  href: api/Zentient.Metadata.MetadataExtensions.html#Zentient_Metadata_MetadataExtensions_WithTag__2_Zentient_Abstractions_Metadata_IMetadata___1_
+  commentId: M:Zentient.Metadata.MetadataExtensions.WithTag``2(Zentient.Abstractions.Metadata.IMetadata,``1)
+  name.vb: WithTag(Of TTag, TValue)(IMetadata, TValue)
+  fullName: Zentient.Metadata.MetadataExtensions.WithTag<TTag, TValue>(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  fullName.vb: Zentient.Metadata.MetadataExtensions.WithTag(Of TTag, TValue)(Zentient.Abstractions.Metadata.IMetadata, TValue)
+  nameWithType: MetadataExtensions.WithTag<TTag, TValue>(IMetadata, TValue)
+  nameWithType.vb: MetadataExtensions.WithTag(Of TTag, TValue)(IMetadata, TValue)
+- uid: Zentient.Metadata.MetadataReader
+  name: MetadataReader
+  href: api/Zentient.Metadata.MetadataReader.html
+  commentId: T:Zentient.Metadata.MetadataReader
+  fullName: Zentient.Metadata.MetadataReader
+  nameWithType: MetadataReader
+- uid: Zentient.Metadata.MetadataReader.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: MetadataReader(IDictionary<string, object?>)
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Zentient.Metadata.MetadataReader.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: Zentient.Metadata.MetadataReader.MetadataReader(System.Collections.Generic.IDictionary<string, object?>)
+  fullName.vb: Zentient.Metadata.MetadataReader.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: MetadataReader.MetadataReader(IDictionary<string, object?>)
+  nameWithType.vb: MetadataReader.New(IDictionary(Of String, Object))
+- uid: Zentient.Metadata.MetadataReader.#ctor*
+  name: MetadataReader
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader__ctor_
+  commentId: Overload:Zentient.Metadata.MetadataReader.#ctor
+  name.vb: New
+  fullName: Zentient.Metadata.MetadataReader.MetadataReader
+  fullName.vb: Zentient.Metadata.MetadataReader.New
+  nameWithType: MetadataReader.MetadataReader
+  nameWithType.vb: MetadataReader.New
+- uid: Zentient.Metadata.MetadataReader.ContainsKey(System.String)
+  name: ContainsKey(string)
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_ContainsKey_System_String_
+  commentId: M:Zentient.Metadata.MetadataReader.ContainsKey(System.String)
+  name.vb: ContainsKey(String)
+  fullName: Zentient.Metadata.MetadataReader.ContainsKey(string)
+  fullName.vb: Zentient.Metadata.MetadataReader.ContainsKey(String)
+  nameWithType: MetadataReader.ContainsKey(string)
+  nameWithType.vb: MetadataReader.ContainsKey(String)
+- uid: Zentient.Metadata.MetadataReader.ContainsKey*
+  name: ContainsKey
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_ContainsKey_
+  commentId: Overload:Zentient.Metadata.MetadataReader.ContainsKey
+  fullName: Zentient.Metadata.MetadataReader.ContainsKey
+  nameWithType: MetadataReader.ContainsKey
+- uid: Zentient.Metadata.MetadataReader.Count
+  name: Count
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Count
+  commentId: P:Zentient.Metadata.MetadataReader.Count
+  fullName: Zentient.Metadata.MetadataReader.Count
+  nameWithType: MetadataReader.Count
+- uid: Zentient.Metadata.MetadataReader.Count*
+  name: Count
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Count_
+  commentId: Overload:Zentient.Metadata.MetadataReader.Count
+  fullName: Zentient.Metadata.MetadataReader.Count
+  nameWithType: MetadataReader.Count
+- uid: Zentient.Metadata.MetadataReader.GetValueOrDefault(System.String,System.Object)
+  name: GetValueOrDefault(string, object?)
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_GetValueOrDefault_System_String_System_Object_
+  commentId: M:Zentient.Metadata.MetadataReader.GetValueOrDefault(System.String,System.Object)
+  name.vb: GetValueOrDefault(String, Object)
+  fullName: Zentient.Metadata.MetadataReader.GetValueOrDefault(string, object?)
+  fullName.vb: Zentient.Metadata.MetadataReader.GetValueOrDefault(String, Object)
+  nameWithType: MetadataReader.GetValueOrDefault(string, object?)
+  nameWithType.vb: MetadataReader.GetValueOrDefault(String, Object)
+- uid: Zentient.Metadata.MetadataReader.GetValueOrDefault*
+  name: GetValueOrDefault
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_GetValueOrDefault_
+  commentId: Overload:Zentient.Metadata.MetadataReader.GetValueOrDefault
+  fullName: Zentient.Metadata.MetadataReader.GetValueOrDefault
+  nameWithType: MetadataReader.GetValueOrDefault
+- uid: Zentient.Metadata.MetadataReader.GetValueOrDefault``1(System.String,``0)
+  name: GetValueOrDefault<TValue>(string, TValue)
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_GetValueOrDefault__1_System_String___0_
+  commentId: M:Zentient.Metadata.MetadataReader.GetValueOrDefault``1(System.String,``0)
+  name.vb: GetValueOrDefault(Of TValue)(String, TValue)
+  fullName: Zentient.Metadata.MetadataReader.GetValueOrDefault<TValue>(string, TValue)
+  fullName.vb: Zentient.Metadata.MetadataReader.GetValueOrDefault(Of TValue)(String, TValue)
+  nameWithType: MetadataReader.GetValueOrDefault<TValue>(string, TValue)
+  nameWithType.vb: MetadataReader.GetValueOrDefault(Of TValue)(String, TValue)
+- uid: Zentient.Metadata.MetadataReader.Keys
+  name: Keys
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Keys
+  commentId: P:Zentient.Metadata.MetadataReader.Keys
+  fullName: Zentient.Metadata.MetadataReader.Keys
+  nameWithType: MetadataReader.Keys
+- uid: Zentient.Metadata.MetadataReader.Keys*
+  name: Keys
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Keys_
+  commentId: Overload:Zentient.Metadata.MetadataReader.Keys
+  fullName: Zentient.Metadata.MetadataReader.Keys
+  nameWithType: MetadataReader.Keys
+- uid: Zentient.Metadata.MetadataReader.Tags
+  name: Tags
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Tags
+  commentId: P:Zentient.Metadata.MetadataReader.Tags
+  fullName: Zentient.Metadata.MetadataReader.Tags
+  nameWithType: MetadataReader.Tags
+- uid: Zentient.Metadata.MetadataReader.Tags*
+  name: Tags
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Tags_
+  commentId: Overload:Zentient.Metadata.MetadataReader.Tags
+  fullName: Zentient.Metadata.MetadataReader.Tags
+  nameWithType: MetadataReader.Tags
+- uid: Zentient.Metadata.MetadataReader.TryGetValue(System.String,System.Object@)
+  name: TryGetValue(string, out object?)
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_TryGetValue_System_String_System_Object__
+  commentId: M:Zentient.Metadata.MetadataReader.TryGetValue(System.String,System.Object@)
+  name.vb: TryGetValue(String, Object)
+  fullName: Zentient.Metadata.MetadataReader.TryGetValue(string, out object?)
+  fullName.vb: Zentient.Metadata.MetadataReader.TryGetValue(String, Object)
+  nameWithType: MetadataReader.TryGetValue(string, out object?)
+  nameWithType.vb: MetadataReader.TryGetValue(String, Object)
+- uid: Zentient.Metadata.MetadataReader.TryGetValue*
+  name: TryGetValue
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_TryGetValue_
+  commentId: Overload:Zentient.Metadata.MetadataReader.TryGetValue
+  fullName: Zentient.Metadata.MetadataReader.TryGetValue
+  nameWithType: MetadataReader.TryGetValue
+- uid: Zentient.Metadata.MetadataReader.TryGetValue``1(System.String,``0@)
+  name: TryGetValue<TValue>(string, out TValue)
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_TryGetValue__1_System_String___0__
+  commentId: M:Zentient.Metadata.MetadataReader.TryGetValue``1(System.String,``0@)
+  name.vb: TryGetValue(Of TValue)(String, TValue)
+  fullName: Zentient.Metadata.MetadataReader.TryGetValue<TValue>(string, out TValue)
+  fullName.vb: Zentient.Metadata.MetadataReader.TryGetValue(Of TValue)(String, TValue)
+  nameWithType: MetadataReader.TryGetValue<TValue>(string, out TValue)
+  nameWithType.vb: MetadataReader.TryGetValue(Of TValue)(String, TValue)
+- uid: Zentient.Metadata.MetadataReader.Values
+  name: Values
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Values
+  commentId: P:Zentient.Metadata.MetadataReader.Values
+  fullName: Zentient.Metadata.MetadataReader.Values
+  nameWithType: MetadataReader.Values
+- uid: Zentient.Metadata.MetadataReader.Values*
+  name: Values
+  href: api/Zentient.Metadata.MetadataReader.html#Zentient_Metadata_MetadataReader_Values_
+  commentId: Overload:Zentient.Metadata.MetadataReader.Values
+  fullName: Zentient.Metadata.MetadataReader.Values
+  nameWithType: MetadataReader.Values
+- uid: Zentient.Metadata.MetadataRegistry
+  name: MetadataRegistry
+  href: api/Zentient.Metadata.MetadataRegistry.html
+  commentId: T:Zentient.Metadata.MetadataRegistry
+  fullName: Zentient.Metadata.MetadataRegistry
+  nameWithType: MetadataRegistry
+- uid: Zentient.Metadata.MetadataRegistry.RegisterPreset(System.Object,Zentient.Abstractions.Metadata.IMetadata)
+  name: RegisterPreset(object, IMetadata)
+  href: api/Zentient.Metadata.MetadataRegistry.html#Zentient_Metadata_MetadataRegistry_RegisterPreset_System_Object_Zentient_Abstractions_Metadata_IMetadata_
+  commentId: M:Zentient.Metadata.MetadataRegistry.RegisterPreset(System.Object,Zentient.Abstractions.Metadata.IMetadata)
+  name.vb: RegisterPreset(Object, IMetadata)
+  fullName: Zentient.Metadata.MetadataRegistry.RegisterPreset(object, Zentient.Abstractions.Metadata.IMetadata)
+  fullName.vb: Zentient.Metadata.MetadataRegistry.RegisterPreset(Object, Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataRegistry.RegisterPreset(object, IMetadata)
+  nameWithType.vb: MetadataRegistry.RegisterPreset(Object, IMetadata)
+- uid: Zentient.Metadata.MetadataRegistry.RegisterPreset*
+  name: RegisterPreset
+  href: api/Zentient.Metadata.MetadataRegistry.html#Zentient_Metadata_MetadataRegistry_RegisterPreset_
+  commentId: Overload:Zentient.Metadata.MetadataRegistry.RegisterPreset
+  fullName: Zentient.Metadata.MetadataRegistry.RegisterPreset
+  nameWithType: MetadataRegistry.RegisterPreset
+- uid: Zentient.Metadata.MetadataRegistry.RegisteredKeys
+  name: RegisteredKeys
+  href: api/Zentient.Metadata.MetadataRegistry.html#Zentient_Metadata_MetadataRegistry_RegisteredKeys
+  commentId: P:Zentient.Metadata.MetadataRegistry.RegisteredKeys
+  fullName: Zentient.Metadata.MetadataRegistry.RegisteredKeys
+  nameWithType: MetadataRegistry.RegisteredKeys
+- uid: Zentient.Metadata.MetadataRegistry.RegisteredKeys*
+  name: RegisteredKeys
+  href: api/Zentient.Metadata.MetadataRegistry.html#Zentient_Metadata_MetadataRegistry_RegisteredKeys_
+  commentId: Overload:Zentient.Metadata.MetadataRegistry.RegisteredKeys
+  fullName: Zentient.Metadata.MetadataRegistry.RegisteredKeys
+  nameWithType: MetadataRegistry.RegisteredKeys
+- uid: Zentient.Metadata.MetadataRegistry.TryGetPreset(System.Object,Zentient.Abstractions.Metadata.IMetadata@)
+  name: TryGetPreset(object, out IMetadata?)
+  href: api/Zentient.Metadata.MetadataRegistry.html#Zentient_Metadata_MetadataRegistry_TryGetPreset_System_Object_Zentient_Abstractions_Metadata_IMetadata__
+  commentId: M:Zentient.Metadata.MetadataRegistry.TryGetPreset(System.Object,Zentient.Abstractions.Metadata.IMetadata@)
+  name.vb: TryGetPreset(Object, IMetadata)
+  fullName: Zentient.Metadata.MetadataRegistry.TryGetPreset(object, out Zentient.Abstractions.Metadata.IMetadata?)
+  fullName.vb: Zentient.Metadata.MetadataRegistry.TryGetPreset(Object, Zentient.Abstractions.Metadata.IMetadata)
+  nameWithType: MetadataRegistry.TryGetPreset(object, out IMetadata?)
+  nameWithType.vb: MetadataRegistry.TryGetPreset(Object, IMetadata)
+- uid: Zentient.Metadata.MetadataRegistry.TryGetPreset*
+  name: TryGetPreset
+  href: api/Zentient.Metadata.MetadataRegistry.html#Zentient_Metadata_MetadataRegistry_TryGetPreset_
+  commentId: Overload:Zentient.Metadata.MetadataRegistry.TryGetPreset
+  fullName: Zentient.Metadata.MetadataRegistry.TryGetPreset
+  nameWithType: MetadataRegistry.TryGetPreset

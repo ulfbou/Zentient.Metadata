@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting Started with Zentient.LibraryTemplate | Zentient.Metadata Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting Started with Zentient.LibraryTemplate | Zentient.Metadata Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Zentient.Metadata">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-with-zentient.librarytemplate">Getting Started with Zentient.LibraryTemplate</h1>
+
+<p>This guide will help you get up and running with your new Zentient library project.</p>
+<!-- Trigger docfx workflow: blank line added -->
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>.NET 8.0 SDK or later</li>
+<li>Visual Studio Code (recommended) or Visual Studio</li>
+<li>Git (for version control)</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="clone-and-setup">1. Clone and Setup</h3>
+<pre><code class="lang-bash"># If you created this from the template, you're already ready!
+# Otherwise, clone your repository:
+git clone &lt;your-repo-url&gt;
+cd &lt;your-project-name&gt;
+
+# Restore dependencies
+dotnet restore
+</code></pre>
+<h3 id="build-and-test">2. Build and Test</h3>
+<pre><code class="lang-bash"># Build the solution
+dotnet build
+
+# Run tests
+dotnet test
+
+# Run tests with coverage
+dotnet test --collect:&quot;XPlat Code Coverage&quot;
+</code></pre>
+<h3 id="development-workflow">3. Development Workflow</h3>
+<p>The project includes comprehensive automation through Directory.<em>.</em> files:</p>
+<pre><code class="lang-bash"># Full build with all checks
+dotnet build -c Release
+
+# Run code analysis
+dotnet build -p:RunCodeAnalysis=true
+
+# Run security scan
+dotnet build -p:RunSecurityCodeAnalysis=true
+
+# Generate documentation
+dotnet build -p:GenerateDocumentation=true
+
+# Create NuGet package
+dotnet pack -c Release
+</code></pre>
+<h2 id="project-structure">Project Structure</h2>
+<pre><code>YourLibrary/
+├── src/                           # Main library source code
+│   ├── YourLibrary.csproj        # Main project file
+│   ├── ExampleService.cs         # Example implementation (replace)
+│   └── GlobalUsings.cs           # Global using statements
+├── tests/                        # Unit tests
+│   ├── YourLibrary.Tests.csproj  # Test project file
+│   ├── ExampleServiceTests.cs    # Example tests (replace)
+│   └── GlobalUsings.cs           # Test global usings
+├── docs/                         # Documentation
+│   └── getting-started.md        # This file
+├── src/                         # Library source code  
+├── tests/                       # Unit tests
+├── docs/                        # Documentation
+├── .vscode/                     # VS Code configuration
+├── .github/                     # GitHub workflows and templates
+├── .vscode/                      # VS Code configuration
+├── analyzers/                    # Code analysis rules
+├── Directory.*.props             # Build configuration
+├── Directory.*.targets           # Build automation
+└── YourLibrary.sln              # Solution file
+</code></pre>
+<h2 id="key-features">Key Features</h2>
+<h3 id="build-automation">🏗️ <strong>Build Automation</strong></h3>
+<ul>
+<li>Multi-target framework support</li>
+<li>Automatic versioning</li>
+<li>NuGet package generation</li>
+<li>Source linking for debugging</li>
+</ul>
+<h3 id="testing-infrastructure">🧪 <strong>Testing Infrastructure</strong></h3>
+<ul>
+<li>xUnit test framework</li>
+<li>Code coverage reporting</li>
+<li>Benchmark testing support</li>
+<li>Continuous testing with file watching</li>
+</ul>
+<h3 id="code-quality">📊 <strong>Code Quality</strong></h3>
+<ul>
+<li>Microsoft analyzers</li>
+<li>StyleCop code style enforcement</li>
+<li>Security analysis</li>
+<li>API surface validation</li>
+</ul>
+<h3 id="security">🔐 <strong>Security</strong></h3>
+<ul>
+<li>Vulnerability scanning</li>
+<li>Dependency validation</li>
+<li>Cryptographic standards enforcement</li>
+<li>Security compliance checking</li>
+</ul>
+<h3 id="documentation">📚 <strong>Documentation</strong></h3>
+<ul>
+<li>XML documentation generation</li>
+<li>DocFX integration</li>
+<li>API documentation</li>
+<li>Code sample validation</li>
+</ul>
+<h3 id="performance">⚡ <strong>Performance</strong></h3>
+<ul>
+<li>BenchmarkDotNet integration</li>
+<li>Memory analysis</li>
+<li>Performance regression detection</li>
+<li>Load testing capabilities</li>
+</ul>
+<h2 id="development-workflow-1">Development Workflow</h2>
+<h3 id="vs-code-recommended">VS Code (Recommended)</h3>
+<ol>
+<li><strong>Open in VS Code</strong>: The project includes complete VS Code configuration</li>
+<li><strong>Install Extensions</strong>: VS Code will prompt to install recommended extensions</li>
+<li><strong>Build</strong>: Use <code>Ctrl+Shift+P</code> → &quot;Tasks: Run Task&quot; → &quot;build&quot;</li>
+<li><strong>Test</strong>: Use <code>Ctrl+Shift+P</code> → &quot;Tasks: Run Task&quot; → &quot;test&quot;</li>
+<li><strong>Debug</strong>: Use F5 to debug tests</li>
+</ol>
+<h3 id="command-line">Command Line</h3>
+<pre><code class="lang-bash"># Watch for changes and rebuild
+dotnet watch build
+
+# Watch for changes and run tests
+dotnet watch test
+
+# Format code
+dotnet format
+
+# Clean build artifacts
+dotnet clean
+</code></pre>
+<h2 id="customization">Customization</h2>
+<h3 id="replacing-example-code">Replacing Example Code</h3>
+<ol>
+<li><strong>Update Project Names</strong>: Replace <code>Zentient.LibraryTemplate</code> with your actual library name</li>
+<li><strong>Replace ExampleService</strong>: Implement your actual library functionality</li>
+<li><strong>Update Tests</strong>: Replace example tests with your actual test cases</li>
+<li><strong>Update Documentation</strong>: Modify README.md and docs/ with your library-specific information</li>
+</ol>
+<h3 id="configuration">Configuration</h3>
+<p>Most settings can be customized through MSBuild properties:</p>
+<pre><code class="lang-xml">&lt;!-- In your .csproj or Directory.Build.props --&gt;
+&lt;PropertyGroup&gt;
+  &lt;EnableSigning&gt;true&lt;/EnableSigning&gt;
+  &lt;EnableTesting&gt;true&lt;/EnableTesting&gt;
+  &lt;EnableQuality&gt;true&lt;/EnableQuality&gt;
+  &lt;EnableSecurity&gt;true&lt;/EnableSecurity&gt;
+  &lt;EnableDocumentation&gt;true&lt;/EnableDocumentation&gt;
+  &lt;EnablePerformance&gt;false&lt;/EnablePerformance&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<h2 id="cicd-integration">CI/CD Integration</h2>
+<p>The project is ready for CI/CD with:</p>
+<ul>
+<li>GitHub Actions workflows (if using GitHub)</li>
+<li>Azure DevOps pipelines (if using Azure DevOps)</li>
+<li>Docker containerization support</li>
+<li>Automated testing and quality checks</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="code-organization">Code Organization</h3>
+<ul>
+<li>Follow the existing namespace structure</li>
+<li>Implement interfaces from Zentient.Abstractions</li>
+<li>Use the IResult pattern for error handling</li>
+<li>Add comprehensive XML documentation</li>
+</ul>
+<h3 id="testing">Testing</h3>
+<ul>
+<li>Maintain high test coverage (aim for &gt;90%)</li>
+<li>Include both unit and integration tests</li>
+<li>Use descriptive test method names</li>
+<li>Follow the Arrange-Act-Assert pattern</li>
+</ul>
+<h3 id="documentation-1">Documentation</h3>
+<ul>
+<li>Document all public APIs</li>
+<li>Include code examples in XML comments</li>
+<li>Update CHANGELOG.md for each release</li>
+<li>Keep README.md current</li>
+</ul>
+<h3 id="performance-1">Performance</h3>
+<ul>
+<li>Use BenchmarkDotNet for performance testing</li>
+<li>Monitor memory allocations</li>
+<li>Validate performance against baselines</li>
+<li>Profile regularly during development</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>Build Errors</strong>:</p>
+<ul>
+<li>Ensure .NET 8.0 SDK is installed</li>
+<li>Run <code>dotnet restore</code> to restore packages</li>
+<li>Check for syntax errors in .csproj files</li>
+</ul>
+<p><strong>Test Failures</strong>:</p>
+<ul>
+<li>Verify test project references are correct</li>
+<li>Check test method signatures</li>
+<li>Ensure test data is valid</li>
+</ul>
+<p><strong>Package Issues</strong>:</p>
+<ul>
+<li>Verify package metadata in Directory.Pack.props</li>
+<li>Check for missing dependencies</li>
+<li>Validate version numbers</li>
+</ul>
+<h3 id="getting-help">Getting Help</h3>
+<ul>
+<li>Check the <a href="https://github.com/Zentient/Zentient.Abstractions">Zentient.Abstractions documentation</a></li>
+<li>Review the example implementations</li>
+<li>File issues in the project repository</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<ol>
+<li><strong>Implement Your Library</strong>: Replace the example code with your actual implementation</li>
+<li><strong>Add Tests</strong>: Write comprehensive tests for your functionality</li>
+<li><strong>Update Documentation</strong>: Customize the documentation for your specific library</li>
+<li><strong>Configure CI/CD</strong>: Set up continuous integration for your project</li>
+<li><strong>Publish</strong>: Create and publish your NuGet package</li>
+</ol>
+<p>Happy coding! 🚀</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/main/docs/getting-started.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright © 2025 Zentient Framework Team. All rights reserved.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

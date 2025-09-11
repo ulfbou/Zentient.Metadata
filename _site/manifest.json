@@ -1,0 +1,398 @@
+{
+  "source_base_path": "/home/runner/work/Zentient.Metadata/Zentient.Metadata",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.Diagnostics.IDiagnosticCheckDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.Diagnostics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.Diagnostics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.IMetadataDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.IMetadataDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.IMetadataScanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.IMetadataScanner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.IMetadataTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.IMetadataTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.IPresetKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.IPresetKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Abstractions.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Abstractions.Metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Analyzers.DuplicateMetadataTagAnalyzer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Analyzers.InvalidAttributeTargetAnalyzer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Analyzers.MissingDocumentationAnalyzer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Analyzers.MissingInterfaceAnalyzer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Analyzers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Analyzers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.AttributeHandlerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.AttributeHandlerContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.AttributeHandlerRegistry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.AttributeMetadataConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.AttributeMetadataConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.AttributeMetadataScanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.AttributeMetadataScanner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.BehaviorDefinitionAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.CategoryDefinitionAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.IAttributeMetadataScanner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.MetadataAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.MetadataAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.MetadataAttributeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.MetadataAttributeReader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.MetadataTagAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.MetadataTagAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.Metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.MetadataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.MetadataExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.MetadataReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.MetadataReader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.MetadataRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.MetadataRegistry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Zentient.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Zentient.Metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Zentient_Metadata_Metadata-Attribute-Specification.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Zentient_Metadata_Metadata-Attribute-Specification.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

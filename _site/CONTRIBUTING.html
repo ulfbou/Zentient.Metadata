@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Contribution Guidelines | Zentient.Metadata Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Contribution Guidelines | Zentient.Metadata Documentation ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="Zentient.Metadata">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="contribution-guidelines">Contribution Guidelines</h1>
+
+<p>Thank you for your interest in contributing to this Zentient library! This document provides guidelines and information for contributors.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>.NET 8.0 SDK or later</li>
+<li>Git</li>
+<li>Visual Studio Code (recommended) or Visual Studio</li>
+<li>Basic understanding of C# and .NET</li>
+</ul>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><p><strong>Fork and Clone</strong></p>
+<pre><code class="lang-bash">git fork &lt;repository-url&gt;
+git clone &lt;your-fork-url&gt;
+cd &lt;project-name&gt;
+</code></pre>
+</li>
+<li><p><strong>Install Dependencies</strong></p>
+<pre><code class="lang-bash">dotnet restore
+</code></pre>
+</li>
+<li><p><strong>Verify Setup</strong></p>
+<pre><code class="lang-bash">dotnet build
+dotnet test
+</code></pre>
+</li>
+</ol>
+<h2 id="development-workflow">Development Workflow</h2>
+<h3 id="branching-strategy">Branching Strategy</h3>
+<ul>
+<li><code>main</code> - Stable release branch</li>
+<li><code>develop</code> - Integration branch for features</li>
+<li><code>feature/&lt;name&gt;</code> - Feature development</li>
+<li><code>bugfix/&lt;name&gt;</code> - Bug fixes</li>
+<li><code>hotfix/&lt;name&gt;</code> - Critical fixes for production</li>
+</ul>
+<h3 id="making-changes">Making Changes</h3>
+<ol>
+<li><p><strong>Create Feature Branch</strong></p>
+<pre><code class="lang-bash">git checkout -b feature/your-feature-name
+</code></pre>
+</li>
+<li><p><strong>Make Changes</strong></p>
+<ul>
+<li>Follow the coding standards</li>
+<li>Add/update tests</li>
+<li>Update documentation</li>
+</ul>
+</li>
+<li><p><strong>Test Changes</strong></p>
+<pre><code class="lang-bash">dotnet build
+dotnet test
+dotnet test --collect:&quot;XPlat Code Coverage&quot;
+</code></pre>
+</li>
+<li><p><strong>Commit Changes</strong></p>
+<pre><code class="lang-bash">git add .
+git commit -m &quot;feat: add your feature description&quot;
+</code></pre>
+</li>
+<li><p><strong>Push and Create PR</strong></p>
+<pre><code class="lang-bash">git push origin feature/your-feature-name
+</code></pre>
+</li>
+</ol>
+<h2 id="coding-standards">Coding Standards</h2>
+<h3 id="code-style">Code Style</h3>
+<p>This project follows the Zentient coding standards:</p>
+<ul>
+<li>Use PascalCase for public members</li>
+<li>Use camelCase for private fields and local variables</li>
+<li>Use UPPER_CASE for constants</li>
+<li>Prefix private fields with underscore: <code>_fieldName</code></li>
+</ul>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<pre><code class="lang-csharp">// Classes and Interfaces
+public class ExampleService { }
+public interface IExampleService { }
+
+// Methods and Properties
+public string ProcessData(string input) { }
+public string DataValue { get; set; }
+
+// Private fields
+private readonly string _connectionString;
+private static readonly ILogger _logger;
+
+// Constants
+public const int MAX_RETRY_COUNT = 3;
+private const string DEFAULT_CONFIG = &quot;default&quot;;
+</code></pre>
+<h3 id="documentation">Documentation</h3>
+<p>All public APIs must have XML documentation:</p>
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// Processes the input data and returns a result.
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;input&quot;&gt;The input data to process.&lt;/param&gt;
+/// &lt;returns&gt;A result containing the processed data or an error.&lt;/returns&gt;
+/// &lt;exception cref=&quot;ArgumentNullException&quot;&gt;Thrown when input is null.&lt;/exception&gt;
+public IResult&lt;string&gt; ProcessData(string input)
+{
+    // Implementation
+}
+</code></pre>
+<h3 id="code-organization">Code Organization</h3>
+<pre><code class="lang-csharp">// File: ExampleService.cs
+using System;
+using Zentient.Abstractions.Common;
+using Zentient.Abstractions.Results;
+
+namespace YourLibrary.Services;
+
+/// &lt;summary&gt;
+/// Service class documentation.
+/// &lt;/summary&gt;
+public class ExampleService : IIdentifiable
+{
+    // Constants first
+    private const int DEFAULT_TIMEOUT = 30;
+    
+    // Static fields
+    private static readonly ILogger _logger = LogManager.GetLogger&lt;ExampleService&gt;();
+    
+    // Instance fields
+    private readonly string _connectionString;
+    
+    // Properties
+    public string Id { get; } = Guid.NewGuid().ToString();
+    
+    // Constructors
+    public ExampleService(string connectionString)
+    {
+        _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+    }
+    
+    // Public methods
+    public IResult&lt;string&gt; ProcessData(string input)
+    {
+        // Implementation
+    }
+    
+    // Private methods
+    private bool ValidateInput(string input)
+    {
+        // Implementation
+    }
+}
+</code></pre>
+<h2 id="testing-guidelines">Testing Guidelines</h2>
+<h3 id="test-structure">Test Structure</h3>
+<pre><code class="lang-csharp">namespace YourLibrary.Tests.Services;
+
+public class ExampleServiceTests
+{
+    [Fact]
+    public void ProcessData_WithValidInput_ReturnsSuccess()
+    {
+        // Arrange
+        var service = new ExampleService(&quot;test-connection&quot;);
+        var input = &quot;test data&quot;;
+        
+        // Act
+        var result = service.ProcessData(input);
+        
+        // Assert
+        Assert.True(result.IsSuccess);
+        Assert.Equal(&quot;TEST DATA&quot;, result.Value);
+    }
+    
+    [Theory]
+    [InlineData(null)]
+    [InlineData(&quot;&quot;)]
+    [InlineData(&quot;   &quot;)]
+    public void ProcessData_WithInvalidInput_ReturnsError(string input)
+    {
+        // Arrange
+        var service = new ExampleService(&quot;test-connection&quot;);
+        
+        // Act
+        var result = service.ProcessData(input);
+        
+        // Assert
+        Assert.True(result.IsFailure);
+        Assert.NotNull(result.Error);
+    }
+}
+</code></pre>
+<h3 id="test-coverage">Test Coverage</h3>
+<ul>
+<li>Aim for &gt;90% code coverage</li>
+<li>Test both success and failure paths</li>
+<li>Include edge cases and boundary conditions</li>
+<li>Use descriptive test method names</li>
+<li>Group related tests in nested classes</li>
+</ul>
+<h3 id="performance-tests">Performance Tests</h3>
+<pre><code class="lang-csharp">[Benchmark]
+public string ProcessData_Performance()
+{
+    return _service.ProcessData(&quot;test input&quot;).Value;
+}
+
+[Fact]
+public void ProcessData_PerformanceRequirement()
+{
+    // Test should complete within acceptable time
+    var stopwatch = Stopwatch.StartNew();
+    
+    _service.ProcessData(&quot;test input&quot;);
+    
+    stopwatch.Stop();
+    Assert.True(stopwatch.ElapsedMilliseconds &lt; 100);
+}
+</code></pre>
+<h2 id="quality-requirements">Quality Requirements</h2>
+<h3 id="code-analysis">Code Analysis</h3>
+<p>All code must pass:</p>
+<ul>
+<li>Microsoft .NET analyzers</li>
+<li>StyleCop analysis</li>
+<li>Security analysis</li>
+<li>Custom Zentient analyzers</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>No hardcoded secrets or credentials</li>
+<li>Validate all inputs</li>
+<li>Use secure cryptographic algorithms</li>
+<li>Follow OWASP guidelines</li>
+</ul>
+<h3 id="performance">Performance</h3>
+<ul>
+<li>No memory leaks</li>
+<li>Efficient algorithms</li>
+<li>Proper resource disposal</li>
+<li>Baseline performance maintained</li>
+</ul>
+<h2 id="pull-request-process">Pull Request Process</h2>
+<h3 id="before-submitting">Before Submitting</h3>
+<ol>
+<li><p><strong>Ensure Tests Pass</strong></p>
+<pre><code class="lang-bash">dotnet test
+</code></pre>
+</li>
+<li><p><strong>Check Code Quality</strong></p>
+<pre><code class="lang-bash">dotnet build -p:RunCodeAnalysis=true
+dotnet build -p:RunSecurityCodeAnalysis=true
+</code></pre>
+</li>
+<li><p><strong>Update Documentation</strong></p>
+<ul>
+<li>Update XML documentation</li>
+<li>Update README if needed</li>
+<li>Update CHANGELOG.md</li>
+</ul>
+</li>
+<li><p><strong>Format Code</strong></p>
+<pre><code class="lang-bash">dotnet format
+</code></pre>
+</li>
+</ol>
+<h3 id="pr-requirements">PR Requirements</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox"> All tests pass</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox"> Code coverage maintained/improved</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox"> No analyzer warnings</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox"> Documentation updated</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox"> CHANGELOG.md updated</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox"> Breaking changes documented</li>
+</ul>
+<h3 id="pr-template">PR Template</h3>
+<pre><code class="lang-markdown">## Description
+Brief description of changes
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Breaking change
+- [ ] Documentation update
+
+## Testing
+- [ ] Unit tests added/updated
+- [ ] Integration tests added/updated
+- [ ] Performance tests added/updated
+
+## Checklist
+- [ ] Code follows style guidelines
+- [ ] Self-review completed
+- [ ] Documentation updated
+- [ ] Tests pass locally
+- [ ] CHANGELOG.md updated
+</code></pre>
+<h3 id="review-process">Review Process</h3>
+<ol>
+<li>Automated checks run (CI/CD)</li>
+<li>Code review by maintainers</li>
+<li>Address feedback</li>
+<li>Final approval and merge</li>
+</ol>
+<h2 id="release-process">Release Process</h2>
+<h3 id="version-numbers">Version Numbers</h3>
+<p>We use <a href="https://semver.org/">Semantic Versioning</a>:</p>
+<ul>
+<li>MAJOR.MINOR.PATCH</li>
+<li>Breaking changes increment MAJOR</li>
+<li>New features increment MINOR</li>
+<li>Bug fixes increment PATCH</li>
+</ul>
+<h3 id="release-workflow">Release Workflow</h3>
+<ol>
+<li>Create release branch from develop</li>
+<li>Update version numbers</li>
+<li>Update CHANGELOG.md</li>
+<li>Create release PR to main</li>
+<li>Tag release</li>
+<li>Publish NuGet package</li>
+</ol>
+<h2 id="community">Community</h2>
+<h3 id="communication">Communication</h3>
+<ul>
+<li>Use GitHub Issues for bug reports</li>
+<li>Use GitHub Discussions for questions</li>
+<li>Follow our Code of Conduct</li>
+<li>Be respectful and constructive</li>
+</ul>
+<h3 id="getting-help">Getting Help</h3>
+<ul>
+<li>Check existing documentation</li>
+<li>Search existing issues</li>
+<li>Ask in GitHub Discussions</li>
+<li>Contact maintainers if needed</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/Zentient/Zentient.Abstractions">Zentient.Abstractions Documentation</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions">.NET Coding Conventions</a></li>
+<li><a href="https://xunit.net/">xUnit Documentation</a></li>
+<li><a href="https://benchmarkdotnet.org/">BenchmarkDotNet Documentation</a></li>
+</ul>
+<p>Thank you for contributing to the Zentient ecosystem! 🚀</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/main/CONTRIBUTING.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright © 2025 Zentient Framework Team. All rights reserved.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

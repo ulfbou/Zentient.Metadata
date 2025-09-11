@@ -1,0 +1,1111 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class MetadataExtensions | Zentient.Metadata Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class MetadataExtensions | Zentient.Metadata Documentation ">
+    
+    <meta name="description" content="Provides a rich set of fluent, type-safe extension methods for working with . These methods enhance developer ergonomics and enable intuitive interactions with the metadata system.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Zentient.Metadata">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li>API Reference</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Zentient.Metadata.MetadataExtensions">
+
+
+
+  <h1 id="Zentient_Metadata_MetadataExtensions" data-uid="Zentient.Metadata.MetadataExtensions" class="text-break">Class MetadataExtensions</h1>
+  <div class="markdown level0 summary"><p>Provides a rich set of fluent, type-safe extension methods for working with <span class="xref">Zentient.Abstractions.Metadata.IMetadata</span>.
+These methods enhance developer ergonomics and enable intuitive interactions with the metadata system.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">MetadataExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Zentient.html">Zentient</a>.<a class="xref" href="Zentient.Metadata.html">Metadata</a></h6>
+  <h6><strong>Assembly</strong>: Zentient.Metadata.dll</h6>
+  <h5 id="Zentient_Metadata_MetadataExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class MetadataExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_GetBehavior_" data-uid="Zentient.Metadata.MetadataExtensions.GetBehavior*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_GetBehavior__1_Zentient_Abstractions_Metadata_IMetadata_" data-uid="Zentient.Metadata.MetadataExtensions.GetBehavior``1(Zentient.Abstractions.Metadata.IMetadata)">GetBehavior&lt;TBehavior&gt;(IMetadata)</h4>
+  <div class="markdown level1 summary"><p>Attempts to retrieve a behavior from the metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMetadata? GetBehavior&lt;TBehavior&gt;(this IMetadata metadata) where TBehavior : IBehaviorDefinition</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><p>The metadata instance representing the behavior, or null if not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBehavior</span></td>
+        <td><p>The concrete behavior definition type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_GetTagValue_" data-uid="Zentient.Metadata.MetadataExtensions.GetTagValue*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_GetTagValue__1_Zentient_Abstractions_Metadata_IMetadata_System_String___0_" data-uid="Zentient.Metadata.MetadataExtensions.GetTagValue``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0)">GetTagValue&lt;TValue&gt;(IMetadata, string, TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue GetTagValue&lt;TValue&gt;(this IMetadata metadata, string key, TValue defaultValue = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_GetTagValue_" data-uid="Zentient.Metadata.MetadataExtensions.GetTagValue*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_GetTagValue__2_Zentient_Abstractions_Metadata_IMetadata___1_" data-uid="Zentient.Metadata.MetadataExtensions.GetTagValue``2(Zentient.Abstractions.Metadata.IMetadata,``1)">GetTagValue&lt;TTag, TValue&gt;(IMetadata, TValue)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of a tag in a type-safe manner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue GetTagValue&lt;TTag, TValue&gt;(this IMetadata metadata, TValue defaultValue = default) where TTag : IMetadataTagDefinition, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td><p>The value to return if the tag does not exist or has the wrong type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value of the tag, or the default value if not found or the type is incorrect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTag</span></td>
+        <td><p>The concrete tag definition type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The expected type of the tag's value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_GetValueOrDefault_" data-uid="Zentient.Metadata.MetadataExtensions.GetValueOrDefault*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_GetValueOrDefault__1_Zentient_Abstractions_Metadata_IMetadata_System_String___0_" data-uid="Zentient.Metadata.MetadataExtensions.GetValueOrDefault``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0)">GetValueOrDefault&lt;TValue&gt;(IMetadata, string, TValue)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of a tag or retrieves a default value if the tag is not present or cannot be cast to the desired type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue GetValueOrDefault&lt;TValue&gt;(this IMetadata metadata, string key, TValue defaultValue = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the tag to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td><p>The default value to return if the tag is not present or cannot be cast.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value of the tag, or the default value if the tag is not present or cannot be cast.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The expected type of the tag's value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_HasBehavior_" data-uid="Zentient.Metadata.MetadataExtensions.HasBehavior*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_HasBehavior__1_Zentient_Abstractions_Metadata_IMetadata_" data-uid="Zentient.Metadata.MetadataExtensions.HasBehavior``1(Zentient.Abstractions.Metadata.IMetadata)">HasBehavior&lt;TBehavior&gt;(IMetadata)</h4>
+  <div class="markdown level1 summary"><p>Checks if the metadata contains a specific behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasBehavior&lt;TBehavior&gt;(this IMetadata metadata) where TBehavior : IBehaviorDefinition</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the behavior is present; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBehavior</span></td>
+        <td><p>The concrete behavior definition type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_HasCategory_" data-uid="Zentient.Metadata.MetadataExtensions.HasCategory*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_HasCategory__1_Zentient_Abstractions_Metadata_IMetadata_" data-uid="Zentient.Metadata.MetadataExtensions.HasCategory``1(Zentient.Abstractions.Metadata.IMetadata)">HasCategory&lt;TCategory&gt;(IMetadata)</h4>
+  <div class="markdown level1 summary"><p>Checks if the metadata is associated with a specific category.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasCategory&lt;TCategory&gt;(this IMetadata metadata) where TCategory : ICategoryDefinition</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the category is present; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TCategory</span></td>
+        <td><p>The concrete category definition type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_HasTag_" data-uid="Zentient.Metadata.MetadataExtensions.HasTag*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_HasTag__1_Zentient_Abstractions_Metadata_IMetadata_" data-uid="Zentient.Metadata.MetadataExtensions.HasTag``1(Zentient.Abstractions.Metadata.IMetadata)">HasTag&lt;TTag&gt;(IMetadata)</h4>
+  <div class="markdown level1 summary"><p>Checks if the metadata contains a specific tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasTag&lt;TTag&gt;(this IMetadata metadata) where TTag : IMetadataTagDefinition</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the tag is present; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTag</span></td>
+        <td><p>The concrete tag definition type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_TryGetTagValue_" data-uid="Zentient.Metadata.MetadataExtensions.TryGetTagValue*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_TryGetTagValue__2_Zentient_Abstractions_Metadata_IMetadata___1__" data-uid="Zentient.Metadata.MetadataExtensions.TryGetTagValue``2(Zentient.Abstractions.Metadata.IMetadata,``1@)">TryGetTagValue&lt;TTag, TValue&gt;(IMetadata, out TValue)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the value of a tag in a type-safe manner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetTagValue&lt;TTag, TValue&gt;(this IMetadata metadata, out TValue value) where TTag : IMetadataTagDefinition, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>When this method returns, contains the value of the tag, if found and if the type is correct; otherwise, the default value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the value was successfully retrieved; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTag</span></td>
+        <td><p>The concrete tag definition type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The expected type of the tag's value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_TryGetValue_" data-uid="Zentient.Metadata.MetadataExtensions.TryGetValue*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_TryGetValue__1_Zentient_Abstractions_Metadata_IMetadata_System_String___0__" data-uid="Zentient.Metadata.MetadataExtensions.TryGetValue``1(Zentient.Abstractions.Metadata.IMetadata,System.String,``0@)">TryGetValue&lt;TValue&gt;(IMetadata, string, out TValue?)</h4>
+  <div class="markdown level1 summary"><p>Tries to retrieve a value from the metadata based on the specified key and casts it to the desired type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetValue&lt;TValue&gt;(this IMetadata metadata, string key, out TValue? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the value to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>When this method returns, contains the casted value if the operation was successful; otherwise, the default value for the type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the value was successfully retrieved and casted; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The expected type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_WithBehavior_" data-uid="Zentient.Metadata.MetadataExtensions.WithBehavior*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_WithBehavior__1_Zentient_Abstractions_Metadata_IMetadata_" data-uid="Zentient.Metadata.MetadataExtensions.WithBehavior``1(Zentient.Abstractions.Metadata.IMetadata)">WithBehavior&lt;TBehavior&gt;(IMetadata)</h4>
+  <div class="markdown level1 summary"><p>Adds a behavior to the metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMetadata WithBehavior&lt;TBehavior&gt;(this IMetadata metadata) where TBehavior : IBehaviorDefinition, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to extend.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><p>A new <span class="xref">Zentient.Abstractions.Metadata.IMetadata</span> instance with the added behavior.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBehavior</span></td>
+        <td><p>The concrete behavior definition type, which must implement <span class="xref">Zentient.Abstractions.Metadata.Definitions.IBehaviorDefinition</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_WithCategory_" data-uid="Zentient.Metadata.MetadataExtensions.WithCategory*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_WithCategory__1_Zentient_Abstractions_Metadata_IMetadata_" data-uid="Zentient.Metadata.MetadataExtensions.WithCategory``1(Zentient.Abstractions.Metadata.IMetadata)">WithCategory&lt;TCategory&gt;(IMetadata)</h4>
+  <div class="markdown level1 summary"><p>Adds a category to the metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMetadata WithCategory&lt;TCategory&gt;(this IMetadata metadata) where TCategory : ICategoryDefinition, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to extend.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><p>A new <span class="xref">Zentient.Abstractions.Metadata.IMetadata</span> instance with the added category.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TCategory</span></td>
+        <td><p>The concrete category definition type, which must implement <span class="xref">Zentient.Abstractions.Metadata.Definitions.ICategoryDefinition</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_WithMergedTags_" data-uid="Zentient.Metadata.MetadataExtensions.WithMergedTags*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_WithMergedTags_Zentient_Abstractions_Metadata_IMetadata_Zentient_Abstractions_Metadata_Readers_IMetadataReader_" data-uid="Zentient.Metadata.MetadataExtensions.WithMergedTags(Zentient.Abstractions.Metadata.IMetadata,Zentient.Abstractions.Metadata.Readers.IMetadataReader)">WithMergedTags(IMetadata, IMetadataReader)</h4>
+  <div class="markdown level1 summary"><p>Merges tags from another <span class="xref">Zentient.Abstractions.Metadata.Readers.IMetadataReader</span> instance into the current metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMetadata WithMergedTags(this IMetadata metadata, IMetadataReader other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to extend.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMetadataReader</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The metadata reader to merge from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><p>A new <span class="xref">Zentient.Abstractions.Metadata.IMetadata</span> instance with the merged tags.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_WithTagIfNotExists_" data-uid="Zentient.Metadata.MetadataExtensions.WithTagIfNotExists*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_WithTagIfNotExists__2_Zentient_Abstractions_Metadata_IMetadata___1_" data-uid="Zentient.Metadata.MetadataExtensions.WithTagIfNotExists``2(Zentient.Abstractions.Metadata.IMetadata,``1)">WithTagIfNotExists&lt;TTag, TValue&gt;(IMetadata, TValue)</h4>
+  <div class="markdown level1 summary"><p>Adds a tag to the metadata only if a tag with the same key does not already exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMetadata WithTagIfNotExists&lt;TTag, TValue&gt;(this IMetadata metadata, TValue value) where TTag : IMetadataTagDefinition, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to extend.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><p>A new <span class="xref">Zentient.Abstractions.Metadata.IMetadata</span> instance if the tag was added; otherwise, the original instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTag</span></td>
+        <td><p>The concrete tag definition type, which must implement <span class="xref">Zentient.Abstractions.Metadata.Definitions.IMetadataTagDefinition</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the tag's value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs">View Source</a>
+  </span>
+  <a id="Zentient_Metadata_MetadataExtensions_WithTag_" data-uid="Zentient.Metadata.MetadataExtensions.WithTag*"></a>
+  <h4 id="Zentient_Metadata_MetadataExtensions_WithTag__2_Zentient_Abstractions_Metadata_IMetadata___1_" data-uid="Zentient.Metadata.MetadataExtensions.WithTag``2(Zentient.Abstractions.Metadata.IMetadata,``1)">WithTag&lt;TTag, TValue&gt;(IMetadata, TValue)</h4>
+  <div class="markdown level1 summary"><p>Adds or updates a tag on the metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMetadata WithTag&lt;TTag, TValue&gt;(this IMetadata metadata, TValue value) where TTag : IMetadataTagDefinition, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The metadata instance to extend.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMetadata</span></td>
+        <td><p>A new <span class="xref">Zentient.Abstractions.Metadata.IMetadata</span> instance with the added or updated tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTag</span></td>
+        <td><p>The concrete tag definition type, which must implement <span class="xref">Zentient.Abstractions.Metadata.Definitions.IMetadataTagDefinition</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the tag's value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ulfbou/Zentient.Metadata/blob/docfx/cicd-fix/src/Zentient.Metadata/MetadataExtensions.cs" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright © 2025 Zentient Framework Team. All rights reserved.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
