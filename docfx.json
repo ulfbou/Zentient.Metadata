@@ -9,7 +9,9 @@
           ],
           "exclude": [
             "**/bin/**/ref/**",
-            "**/obj/**"
+            "**/obj/**",
+            "**/ulfbou.github.io/**",
+            "**/ulfbou.github.io/**/bin/**"
           ]
         }
       ],
