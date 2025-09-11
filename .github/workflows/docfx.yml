@@ -1,5 +1,5 @@
 # DocFX Documentation Build Workflow
-# Triggers: manual (workflow_dispatch), push to docs/*, or on new release
+# Triggers: manual (workflow_dispatch), push to docs/*, docfx.json, assets/*, and when docfx.yml changes
 
 name: Build & Publish DocFX Documentation
 
@@ -11,6 +11,7 @@ on:
       - 'docs/**'
       - 'docfx.json'
       - 'assets/**'
+      - '.github/workflows/docfx.yml'
   release:
     types: [published]
 
@@ -22,10 +23,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET SDK
+      - name: Setup .NET SDK (install 9.0.100 to satisfy nested global.json)
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '9.0.100'
 
       - name: Install DocFX (pinned version)
         run: dotnet tool install -g docfx --version 2.77.0
@@ -67,6 +68,6 @@ jobs:
           force_orphan: true
 
 # Notes:
-# - This workflow only triggers on manual runs, pushes to docs/*, docfx.json, assets/*, or new releases.
+# - This workflow only triggers on manual runs, pushes to docs/*, docfx.json, assets/*, .github/workflows/docfx.yml, or new releases.
 # - All docs, markdown, yaml, and static assets are included in the published site.
 # - Documentation is published to the gh-pages branch for GitHub Pages hosting.
