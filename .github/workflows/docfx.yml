@@ -40,8 +40,8 @@ jobs:
           set -euo pipefail
           echo "Restoring solution $SOLUTION"
           dotnet restore "$SOLUTION"
-          echo "Building solution for net8.0 (release) to provide assemblies for DocFX"
-          dotnet build "$SOLUTION" -c Release -f net8.0
+          echo "Building solution (Release) to provide assemblies for DocFX"
+          dotnet build "$SOLUTION" -c Release
 
       - name: Dotnet info (diagnostic)
         run: dotnet --info
