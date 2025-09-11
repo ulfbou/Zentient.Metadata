@@ -56,10 +56,87 @@ jobs:
           dotnet restore
         # Fail-fast: immediate exit on error to expose restore diagnostics
 
+  # New job: validate IsPackable policy before builds
+  validate-packability:
+    name: Validate IsPackable Policy
+    needs: restore
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Enforce packability rules
+        # This step fails the job if any rule is violated.
+        run: |
+          set -euo pipefail
+          echo "Validating IsPackable rules for src/ and tests/ projects"
+
+          missing_packable=()
+          wrong_test_packable=()
+          analyzer_not_packable=()
+
+          # Validate src projects: must explicitly contain <IsPackable>true</IsPackable>
+          for proj in $(git ls-files 'src/**/*.csproj' 'src/*.csproj'); do
+            if ! grep -q '<IsPackable>true</IsPackable>' "$proj"; then
+              missing_packable+=("$proj")
+            fi
+          done
+
+          # Validate analyzer projects are packable (Zentient.Metadata.Analyzers etc.)
+          for aproj in $(git ls-files 'src/*.Analyzers.csproj' 'src/**/*.Analyzers.csproj'); do
+            if ! grep -q '<IsPackable>true</IsPackable>' "$aproj"; then
+              analyzer_not_packable+=("$aproj")
+            fi
+          done
+
+          # Validate test projects explicitly set IsPackable to false
+          for tproj in $(git ls-files 'tests/*.csproj' 'tests/**/*.csproj'); do
+            if ! grep -q '<IsPackable>false</IsPackable>' "$tproj"; then
+              wrong_test_packable+=("$tproj")
+            fi
+          done
+
+          failed=0
+          if [ ${#missing_packable[@]} -gt 0 ]; then
+            echo "ERROR: The following src/ projects do not contain an explicit '<IsPackable>true</IsPackable>' entry:" >&2
+            for f in "${missing_packable[@]}"; do echo "  - $f" >&2; done
+            echo >&2
+            echo "Recommendation: add the following to each library .csproj under src/:" >&2
+            echo "  <PropertyGroup>" >&2
+            echo "    <IsPackable>true</IsPackable>" >&2
+            echo "  </PropertyGroup>" >&2
+            failed=1
+          fi
+
+          if [ ${#analyzer_not_packable[@]} -gt 0 ]; then
+            echo "ERROR: The following analyzer projects must be packable (IsPackable=true):" >&2
+            for f in "${analyzer_not_packable[@]}"; do echo "  - $f" >&2; done
+            failed=1
+          fi
+
+          if [ ${#wrong_test_packable[@]} -gt 0 ]; then
+            echo "ERROR: The following test projects do not explicitly set '<IsPackable>false</IsPackable>':" >&2
+            for f in "${wrong_test_packable[@]}"; do echo "  - $f" >&2; done
+            echo >&2
+            echo "Recommendation: add the following to each test .csproj under tests/:" >&2
+            echo "  <PropertyGroup>" >&2
+            echo "    <IsPackable>false</IsPackable>" >&2
+            echo "  </PropertyGroup>" >&2
+            failed=1
+          fi
+
+          if [ "$failed" -ne 0 ]; then
+            echo "Packability validation failed." >&2
+            exit 2
+          fi
+
+          echo "Packability validation passed."
+
   # 2) Build class libraries matrix (net8.0, net9.0)
   build:
     name: Build Projects (class libraries)
-    needs: restore
+    needs: [ restore, validate-packability ]
     runs-on: ubuntu-latest
     strategy:
       matrix:
