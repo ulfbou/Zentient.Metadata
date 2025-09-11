@@ -6,7 +6,7 @@ name: Build & Publish DocFX Documentation
 on:
   workflow_dispatch: {}
   push:
-    branches: [main]
+    branches: [main, 'docfx/cicd-fix']
     paths:
       - 'docs/**'
       - 'docfx.json'
