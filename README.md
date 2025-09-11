@@ -198,3 +198,23 @@ public class AbstractionsLayerSample
 - [CHANGELOG.md](CHANGELOG.md)
 
 ---
+
+# Zentient.Metadata
+
+Core metadata engine for the Zentient Framework.
+
+## CI/CD
+
+This repository uses a consolidated GitHub Actions workflow (.github/workflows/ci-cd.yml) that performs restore, build, test (matrix over .NET SDK versions), pack, optional signing, and publish.
+
+Highlights:
+- Matrix build for .NET 8 and .NET 9.
+- Analyzer projects target netstandard2.0 and are packed with analyzers.
+- Pack step builds the solution on the packaging runner to ensure artifacts for all TFMs are generated.
+- Release is triggered by pushing tags in the form `vX.Y.Z` and publishes both .nupkg and .snupkg to NuGet.org.
+
+See .github/workflows/ci-cd.yml for details.
+
+## Release process
+
+Follow the steps in CONTRIBUTING.md to prepare releases. Tag releases with `vX.Y.Z`; the workflow will derive package versions from tags for official releases, otherwise it creates deterministic CI pre-release versions.
