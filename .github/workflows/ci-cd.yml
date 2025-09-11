@@ -8,6 +8,9 @@
 
 name: CI/CD
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ develop, 'release/*' ]
@@ -275,6 +278,25 @@ jobs:
           body_path: release_assets/CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout repository for retry tagging
+        if: ${{ failure() }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create and push retry tag
+        if: ${{ failure() }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          timestamp=$(date -u +%Y%m%d%H%M%S)
+          newtag="v1.0.0-retry.${timestamp}"
+          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git tag -f "$newtag"
+          git push --force origin "refs/tags/$newtag"
 
 # End of workflow
 # Notes:
