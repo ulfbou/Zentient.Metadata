@@ -137,9 +137,12 @@ jobs:
             date=$(date -u +%Y%m%d%H%M)
             ver="${base}-ci.${date}.${shortsha}"
           fi
-          # sanitize and strip CR/LF to avoid invalid GITHUB_OUTPUT format
+          # sanitize: remove CR to avoid file-command format errors
           ver=$(printf "%s" "$ver" | tr -d '\r')
-          printf 'version=%s\n' "$ver" >> "$GITHUB_OUTPUT"
+          # write using heredoc to be safe for any characters
+          echo "version<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$ver" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
       - name: Create artifacts dir
         run: mkdir -p artifacts
