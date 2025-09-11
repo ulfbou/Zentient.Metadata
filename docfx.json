@@ -15,8 +15,7 @@
       "dest": "api",
       "filter": "filterConfig.yml",
       "msbuildProperties": {
-        "Configuration": "Release",
-        "TargetFramework": "net8.0"
+        "Configuration": "Release"
       }
     }
   ],
