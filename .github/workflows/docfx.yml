@@ -1,0 +1,71 @@
+# DocFX Documentation Build Workflow
+# Triggers: manual (workflow_dispatch), push to docs/*, or on new release
+
+name: Build & Publish DocFX Documentation
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'docfx.json'
+      - 'assets/**'
+  release:
+    types: [published]
+
+jobs:
+  build-docfx:
+    name: Build DocFX Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install DocFX
+        run: dotnet tool update -g docfx
+
+      - name: Build documentation
+        run: docfx docfx.json --output _site
+
+      - name: Copy additional documentation (Markdown, YAML, images)
+        run: |
+          set -euo pipefail
+          mkdir -p _site/docs
+          cp -r docs/* _site/docs/ || true
+          find . -maxdepth 1 -type f \( -name '*.md' -o -name '*.yml' \) -exec cp {} _site/ \;
+          # Copy common static assets if present
+          for ext in png jpg jpeg gif svg pdf; do
+            find docs/ -type f -name "*.$ext" -exec cp --parents {} _site/ \; || true
+          done
+          # Copy all assets (images, diagrams, etc.) from assets/ to _site/assets
+          if [ -d assets ]; then
+            mkdir -p _site/assets
+            cp -r assets/* _site/assets/ || true
+          fi
+
+      - name: Upload generated site as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docfx-site
+          path: _site
+
+      # Optional: Deploy to GitHub Pages (uncomment to enable)
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: _site
+      #     publish_branch: gh-pages
+      #     force_orphan: true
+
+# Notes:
+# - This workflow only triggers on manual runs, pushes to docs/*, docfx.json, assets/*, or new releases.
+# - All docs, markdown, yaml, and static assets are included in the published site.
+# - To preview docs for a PR, run this workflow manually and download the artifact.
+# - To enable GitHub Pages, uncomment the deploy step and configure your repo's Pages settings.

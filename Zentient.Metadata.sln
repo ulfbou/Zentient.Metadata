@@ -72,6 +72,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github Actions", "Github Actions", "{EEC8BDFA-DC4D-4F65-B04D-F9D53D0C7E89}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\ci-cd.yml = .github\workflows\ci-cd.yml
+		.github\workflows\docfx.yml = .github\workflows\docfx.yml
 	EndProjectSection
 EndProject
 Global
