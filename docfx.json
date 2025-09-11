@@ -4,10 +4,11 @@
       "src": [
         {
           "files": [
-            "src/**/*.csproj"
+            "src/**/bin/Release/**/Zentient.*.dll",
+            "src/**/bin/Release/**/Zentient.Metadata.*.dll"
           ],
           "exclude": [
-            "**/bin/**",
+            "**/bin/**/ref/**",
             "**/obj/**"
           ]
         }
