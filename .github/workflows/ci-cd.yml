@@ -38,10 +38,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET SDK
+      - name: Setup .NET SDK (matrix)
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
+
+      - name: Ensure .NET 9.0.100 installed (satisfy global.json)
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.100
 
       - name: Cache NuGet packages
         uses: actions/cache@v4
@@ -97,10 +102,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET SDK (use 9.x for packing)
+      - name: Setup .NET SDK (use 9.0.100 for packing)
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.0.x
+          dotnet-version: 9.0.100
 
       - name: Restore
         run: dotnet restore ${{ env.SOLUTION }}
@@ -186,7 +191,7 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.0.x
+          dotnet-version: 9.0.100
 
       - name: Push packages to NuGet.org (packages and symbols)
         env:
