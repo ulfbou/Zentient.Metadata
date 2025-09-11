@@ -107,6 +107,11 @@ jobs:
         with:
           dotnet-version: 9.0.100
 
+      - name: Also install .NET 8.0 SDK (required to build net8.0 outputs)
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
       - name: Restore
         run: dotnet restore ${{ env.SOLUTION }}
 
@@ -137,11 +142,18 @@ jobs:
       - name: Create artifacts dir
         run: mkdir -p artifacts
 
+      - name: Build solution for packing
+        run: |
+          set -euo pipefail
+          echo "Building solution before packing to ensure artifacts exist"
+          dotnet build ${{ env.SOLUTION }} -c Release
+
       - name: Pack solution (include symbols and sources)
         run: |
           set -euo pipefail
           echo "Packing with PackageVersion=${{ steps.pkgver.outputs.version }}"
-          dotnet pack ${{ env.SOLUTION }} -c Release --no-build -p:PackageVersion=${{ steps.pkgver.outputs.version }} --include-symbols --include-source -o artifacts || { echo "Pack failed"; exit 1; }
+          # Do not use --no-build here; ensure build artifacts are present on this runner
+          dotnet pack ${{ env.SOLUTION }} -c Release -p:PackageVersion=${{ steps.pkgver.outputs.version }} --include-symbols --include-source -o artifacts || { echo "Pack failed"; exit 1; }
 
       - name: Upload NuGet packages as artifacts
         uses: actions/upload-artifact@v4
