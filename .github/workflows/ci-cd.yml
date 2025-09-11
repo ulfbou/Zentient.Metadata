@@ -239,16 +239,40 @@ jobs:
             echo "No packages found to push."; exit 1
           fi
 
+      - name: Prepare release assets
+        run: |
+          set -euo pipefail
+          mkdir -p release_assets
+          # Copy package artifacts if present
+          shopt -s nullglob || true
+          for pkg in artifacts/*.nupkg; do
+            cp "$pkg" release_assets/ || true
+          done
+          for sym in artifacts/*.snupkg; do
+            cp "$sym" release_assets/ || true
+          done
+          # Use existing CHANGELOG/LICENSE or create minimal placeholders
+          if [ -f CHANGELOG.md ]; then
+            cp CHANGELOG.md release_assets/CHANGELOG.md
+          else
+            echo "Release triggered by $GITHUB_REF" > release_assets/CHANGELOG.md
+          fi
+          if [ -f LICENSE ]; then
+            cp LICENSE release_assets/LICENSE
+          else
+            echo "MIT License - placeholder" > release_assets/LICENSE
+          fi
+          # Copy package README files if any
+          for f in src/*/README.md; do
+            if [ -f "$f" ]; then cp "$f" release_assets/; fi
+          done
+
       - name: Create GitHub Release and attach artifacts
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            artifacts/*.nupkg
-            artifacts/*.snupkg
-            CHANGELOG.md
-            LICENSE
-            src/**/README.md
-          body_path: CHANGELOG.md
+            release_assets/*
+          body_path: release_assets/CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
