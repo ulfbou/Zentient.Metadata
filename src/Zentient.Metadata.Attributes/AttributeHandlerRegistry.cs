@@ -26,12 +26,17 @@ namespace Zentient.Metadata.Attributes
         /// </summary>
         public static bool TryHandle(Attribute attr, AttributeHandlerContext ctx)
         {
-            if (attr == null) return false;
+            if (attr == null)
+            {
+                return false;
+            }
+
             if (_handlers.TryGetValue(attr.GetType(), out var del))
             {
                 del.DynamicInvoke(attr, ctx);
                 return true;
             }
+
             return false;
         }
     }

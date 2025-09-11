@@ -6,17 +6,22 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{12345678-1234-5678-9ABC-DEF012345678}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		CHANGELOG.md = CHANGELOG.md
+		CONTRIBUTING.md = CONTRIBUTING.md
 		docfx.json = docfx.json
-		global.json = global.json
+		favicon.png = favicon.png
 		LICENSE = LICENSE
 		README.md = README.md
+		test.runsettings = test.runsettings
+		toc.yml = toc.yml
 		Zentient.snk = Zentient.snk
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{87654321-4321-8765-CBA9-210FEDCBA987}"
 	ProjectSection(SolutionItems) = preProject
+		Directory.Analyzer.props = Directory.Analyzer.props
 		Directory.Build.props = Directory.Build.props
 		Directory.Build.targets = Directory.Build.targets
 		Directory.Core.props = Directory.Core.props
@@ -39,11 +44,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{87654321
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{ABCDEF12-3456-7890-ABCD-EF1234567890}"
 	ProjectSection(SolutionItems) = preProject
-		docs\README.md = docs\README.md
-		docs\Zentient.Abstractions.ApiReference.3.0.2.Compressed.md = docs\Zentient.Abstractions.ApiReference.3.0.2.Compressed.md
-		docs\Zentient_Metadata-Specification.md = docs\Zentient_Metadata-Specification.md
-		docs\Zentient_Metadata_Attribute-Specification.md = docs\Zentient_Metadata_Attribute-Specification.md
-		Zentient_Metadata_Diagnostics-Specification.md = Zentient_Metadata_Diagnostics-Specification.md
+		docs\architecture.md = docs\architecture.md
+		docs\getting-started.md = docs\getting-started.md
+		docs\toc.yml = docs\toc.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
@@ -56,12 +59,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zentient.Metadata", "src\Ze
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zentient.Metadata.Attributes", "src\Zentient.Metadata.Attributes\Zentient.Metadata.Attributes.csproj", "{4CB19B33-5FC1-4434-883F-6E64E3C5A30C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AttributeReader", "AttributeReader", "{8C4A74FF-0E77-49C8-BF1A-8F92D9CC0ED1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DDB370C6-02E4-49AB-95DB-787276531995}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "analyzers", "analyzers", "{6C52AEF7-A1A8-4817-9097-1F4261C62F9C}"
 	ProjectSection(SolutionItems) = preProject
 		analyzers\Zentient.ruleset = analyzers\Zentient.ruleset
@@ -71,6 +68,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zentient.Metadata.Analyzers", "src\Zentient.Metadata.Analyzers\Zentient.Metadata.Analyzers.csproj", "{8F285835-9471-DDC6-AD3C-7F7E03FD6EFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zentient.Metadata.Abstractions", "src\Zentient.Metadata.Abstractions\Zentient.Metadata.Abstractions.csproj", "{EE0C1B91-2CE7-4954-8800-FE342F9F3B83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github Actions", "Github Actions", "{EEC8BDFA-DC4D-4F65-B04D-F9D53D0C7E89}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-cd.yml = .github\workflows\ci-cd.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,8 +152,6 @@ Global
 		{47E5B74C-F319-4EB8-B86E-3A6672932894} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{D2A46F0E-9224-4862-B411-BED314148A27} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{4CB19B33-5FC1-4434-883F-6E64E3C5A30C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
-		{8C4A74FF-0E77-49C8-BF1A-8F92D9CC0ED1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{DDB370C6-02E4-49AB-95DB-787276531995} = {8C4A74FF-0E77-49C8-BF1A-8F92D9CC0ED1}
 		{8F285835-9471-DDC6-AD3C-7F7E03FD6EFE} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{EE0C1B91-2CE7-4954-8800-FE342F9F3B83} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection

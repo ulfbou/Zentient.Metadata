@@ -1,9 +1,21 @@
 <!-- Directory.Analyzer.props -->
-<!-- This file contains configuration settings specific to Roslyn analyzer projects. -->
 <Project>
 
+  <!-- Identify Analyzer Projects -->
+  <PropertyGroup Condition="'$(IsRoslynAnalyzerProject)' != 'true' AND
+                            '$(IsAnalyzer)' != 'true' AND
+                            '$(IsTestProject)' != 'true' AND
+                            '$(MSBuildProjectName)' != '' AND
+                            $(MSBuildProjectName.Contains('Analyzer'))">
+    <IsRoslynAnalyzerProject>true</IsRoslynAnalyzerProject>
+
+    <IsRoslynAnalyzerProject Condition="'$(IsRoslynAnalyzerProject)' == ''">true</IsRoslynAnalyzerProject>
+    <IsAnalyzer Condition="'$(IsAnalyzer)' == ''">true</IsAnalyzer>
+  </PropertyGroup>
+
   <!-- Core Analyzer Configuration -->
-  <PropertyGroup Label="Analyzer">
+  <PropertyGroup Label="Analyzer"
+                 Condition=" '$(IsAnalyzer)' == 'true' ">
     
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>

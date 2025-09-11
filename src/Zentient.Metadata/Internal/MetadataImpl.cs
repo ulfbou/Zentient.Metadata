@@ -99,9 +99,14 @@ namespace Zentient.Metadata.Internal
             foreach (var tag in tags)
             {
                 var updated = newTags.SetItem(tag.Key, tag.Value);
-                if (!ReferenceEquals(updated, newTags)) changed = true;
+                if (!ReferenceEquals(updated, newTags))
+                {
+                    changed = true;
+                }
+
                 newTags = updated;
             }
+
             return changed ? new MetadataImpl(newTags) : this;
         }
 
@@ -121,7 +126,8 @@ namespace Zentient.Metadata.Internal
             foreach (var key in keySet)
             {
                 var updated = newTags.Remove(key);
-                if (!ReferenceEquals(updated, newTags)) changed = true;
+                if (!ReferenceEquals(updated, newTags))
+                    changed = true;
                 newTags = updated;
             }
             return changed ? new MetadataImpl(newTags) : this;
@@ -140,7 +146,8 @@ namespace Zentient.Metadata.Internal
             foreach (var tag in other.Tags)
             {
                 var updated = newTags.SetItem(tag.Key, tag.Value);
-                if (!ReferenceEquals(updated, newTags)) changed = true;
+                if (!ReferenceEquals(updated, newTags))
+                    changed = true;
                 newTags = updated;
             }
             return changed ? new MetadataImpl(newTags) : this;

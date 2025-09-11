@@ -2,19 +2,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
-    <AssemblyName>Zentient.Metadata.Analyzers</AssemblyName>
     <RootNamespace>Zentient.Metadata.Analyzers</RootNamespace>
+    <IsAnalyzer>true</IsAnalyzer>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>CS1591;RS1038</NoWarn>
     <PackageReleaseNotes>See CHANGELOG.md for release notes and docs/ for full specification.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>zentient;metadata;analyzers;roslyn;dx;validation;attributes</PackageTags>
-  </PropertyGroup>
 
-  <PropertyGroup>
+    <AssemblyName>Zentient.Metadata.Analyzers</AssemblyName>
     <AssemblyTitle>Zentient.Metadata.Analyzers</AssemblyTitle>
     <Description>Roslyn analyzers for Zentient.Metadata DX-friendliness. See README.md and CHANGELOG.md for details.</Description>
     <Company>Zentient Framework Team</Company>

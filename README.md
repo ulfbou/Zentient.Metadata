@@ -1,5 +1,6 @@
 # Zentient.Metadata Monorepo
 
+[![.github/workflows/ci-cd.yml](https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/ulfbou/Zentient.Metadata/actions/workflows/ci-cd.yml)
 [![NuGet](https://img.shields.io/nuget/v/Zentient.Metadata.svg)](https://www.nuget.org/packages/Zentient.Metadata)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0-blue.svg)](https://dotnet.microsoft.com/)
