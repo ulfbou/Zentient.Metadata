@@ -4,7 +4,7 @@
   <PropertyGroup>
     <!-- Template Symbols -->
     <ProjectName>Zentient.Metadata</ProjectName>
-    <Author>Ulf Bourelius;Zentient Framework Team</Author>
+    <Authors>Ulf Bourelius;Zentient Framework Team</Authors>
     <Company>Zentient Framework Team</Company>
     <Description>
       The Zentient.Metadata package provides a powerful, attribute-based system for declaring and discovering metadata in your .NET applications. It shifts metadata management from an imperative, code-heavy process to a simple, declarative one, enhancing the discoverability and extensibility of your components.
@@ -35,12 +35,13 @@
     <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
 
     <!-- Packaging -->
-    <IsPackable Condition="'$(IsPackable)' == '' AND '$(OutputType)' == 'Library'">true</IsPackable>
-    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release' AND '$(IsPackable)' == 'true'">true</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
     <PackageReleaseNotes>See CHANGELOG.md for release notes and docs/ for full specification.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>zentient;metadata;core;builder;scanner;immutable;runtime;reflection;extensible</PackageTags>
+    <PackageAuthors>Ulf Bourelius;Zentient Framework Team</PackageAuthors>
 
     <!-- Feature Flags -->
     <EnableSigning Condition="'$(EnableSigning)' == ''">true</EnableSigning>

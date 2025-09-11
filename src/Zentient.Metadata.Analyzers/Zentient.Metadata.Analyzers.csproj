@@ -16,8 +16,9 @@
     <AssemblyTitle>Zentient.Metadata.Analyzers</AssemblyTitle>
     <Description>Roslyn analyzers for Zentient.Metadata DX-friendliness. See README.md and CHANGELOG.md for details.</Description>
     <Company>Zentient Framework Team</Company>
-    <Authors>Zentient Framework Team</Authors>
+    <Authors>Ulf Bourelius;Zentient Framework Team</Authors>
     <Copyright>Copyright © 2025 Zentient Framework Team. All rights reserved.</Copyright>
+    <PackageAuthors>Ulf Bourelius;Zentient Framework Team</PackageAuthors>
     <PackageProjectUrl>https://github.com/ulfbou/Zentient.Metadata.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ulfbou/Zentient.Metadata.git</RepositoryUrl>
     <VersionPrefix Condition="'$(VersionPrefix)' == ''">1.0.0</VersionPrefix>
@@ -27,6 +28,8 @@
     <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
     <FileVersion>$(VersionPrefix).0</FileVersion>
     <InformationalVersion>$(Version)</InformationalVersion>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
