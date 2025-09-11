@@ -124,7 +124,6 @@ jobs:
             # Strip v prefix if present: refs/tags/v1.2.3 -> 1.2.3
             tag=${GITHUB_REF#refs/tags/}
             ver=${tag#v}
-            echo "version=$ver" >> $GITHUB_OUTPUT
           else
             # Try to derive a base semantic version from any VersionPrefix in the repo
             base=$(git grep -m1 "<VersionPrefix>" || true)
@@ -137,8 +136,10 @@ jobs:
             shortsha=$(git rev-parse --short=8 HEAD)
             date=$(date -u +%Y%m%d%H%M)
             ver="${base}-ci.${date}.${shortsha}"
-            echo "version=$ver" >> $GITHUB_OUTPUT
           fi
+          # sanitize and strip CR/LF to avoid invalid GITHUB_OUTPUT format
+          ver=$(printf "%s" "$ver" | tr -d '\r')
+          printf 'version=%s\n' "$ver" >> "$GITHUB_OUTPUT"
 
       - name: Create artifacts dir
         run: mkdir -p artifacts
