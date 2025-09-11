@@ -139,10 +139,8 @@ jobs:
           fi
           # sanitize: remove CR to avoid file-command format errors
           ver=$(printf "%s" "$ver" | tr -d '\r')
-          # write using heredoc to be safe for any characters
-          echo "version<<EOF" >> "$GITHUB_OUTPUT"
-          echo "$ver" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
+          # persist version to workspace file for later steps
+          echo "$ver" > version.txt
 
       - name: Create artifacts dir
         run: mkdir -p artifacts
@@ -156,9 +154,10 @@ jobs:
       - name: Pack solution (include symbols and sources)
         run: |
           set -euo pipefail
-          echo "Packing with PackageVersion=${{ steps.pkgver.outputs.version }}"
+          ver=$(cat version.txt)
+          echo "Packing with PackageVersion=$ver"
           # Do not use --no-build here; ensure build artifacts are present on this runner
-          dotnet pack ${{ env.SOLUTION }} -c Release -p:PackageVersion=${{ steps.pkgver.outputs.version }} --include-symbols --include-source -o artifacts || { echo "Pack failed"; exit 1; }
+          dotnet pack ${{ env.SOLUTION }} -c Release -p:PackageVersion="$ver" --include-symbols --include-source -o artifacts || { echo "Pack failed"; exit 1; }
 
       - name: Upload NuGet packages as artifacts
         uses: actions/upload-artifact@v4
