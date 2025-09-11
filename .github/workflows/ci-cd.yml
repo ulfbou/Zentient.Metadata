@@ -10,7 +10,7 @@ name: CI/CD
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop, 'release/*' ]
     tags: [ 'v*.*.*' ] # Release publishing only for semantic tags like v1.2.3
   pull_request:
     branches: [ main ]
