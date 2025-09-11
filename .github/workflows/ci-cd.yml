@@ -14,6 +14,7 @@ on:
     tags: [ 'v*.*.*' ] # Release publishing only for semantic tags like v1.2.3
   pull_request:
     branches: [ main ]
+  workflow_dispatch: {}
 
 env:
   SOLUTION: Zentient.Metadata.sln
