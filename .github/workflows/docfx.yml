@@ -23,10 +23,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET SDK (install 8.0.414 to match global.json)
+      - name: Setup .NET SDK (install 9.0.100 to match global.json)
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.414'
+          dotnet-version: '9.0.100'
 
       - name: Dotnet info (diagnostic)
         run: dotnet --info
